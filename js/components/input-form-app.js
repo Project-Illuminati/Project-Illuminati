@@ -23,13 +23,12 @@ export default class App {
         this.main = dom.querySelector('main');
         let profileInputForm = new ProfileInputForm({
             people: this.people,
-            onSubmit: function(people) {
-                profileInputForm.update({
-                    people: people
-                });
+            onSubmit: function() {
+                profileInputForm.redirect();
             }
         });
         this.main.appendChild(profileInputForm.render());
+
         return dom;
     }
 }

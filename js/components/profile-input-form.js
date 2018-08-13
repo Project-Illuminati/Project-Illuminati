@@ -45,9 +45,9 @@ export default class ProfileInputForm {
         this.onSubmit = props.onSubmit;
     }
 
-    update(props) {
-        this.people = props.people;
-        console.log('inside update');
+    redirect() {
+        console.log('go to choices page');
+        console.log(this.people);
     }
     render() {
         let dom = template();
@@ -68,7 +68,29 @@ export default class ProfileInputForm {
             let pic = elements.pic.value;
             let ladder = elements.ladder.value;
 
-            console.log(name, income, fertility, book, bio, pic, ladder);
+            this.person = { name: name,
+                income: income,
+                fertility: fertility,
+                book: book,
+                bio: bio,
+                pic: pic,
+                ladder: ladder,
+                bio_picks: [],
+                pic_picks: [] };
+
+            try {
+                this.onSubmit(this.people);
+                // #4 Process success or failure
+                this.form.reset();
+                document.activeElement.blur();
+            }
+            catch (err) {
+                // #4 Process success or failure
+                console.log(err.message);
+            }
+
+            this.people.push(this.person);
+
         });
 
         return dom;
