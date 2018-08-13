@@ -20,7 +20,7 @@ export default data;
 window.addEventListener('beforeunload', () => {
     // turn data back into a string (of json)
     let json = JSON.stringify(data);
-    console.log('window unload, json is', json);
+    // console.log('window unload, json is', json);
     // store in localStorage
     window.localStorage.setItem('data', json);
 });
