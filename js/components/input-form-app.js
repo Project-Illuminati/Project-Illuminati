@@ -1,7 +1,7 @@
 'use strict';
 
 import peopleApi from '../services/people-api.js';
-import html from '/js/html.js';
+import html from '../html.js';
 // import Header from './header.js';
 // import Footer from './footer.js';
 
@@ -38,17 +38,20 @@ let template = function() {
                 <input type="range" min="1" max="5">
         </form>
     </main>`;
+
 };
 
 export default class App {
     constructor() {
         this.people = peopleApi.get();
     }
-   
+
     render() {
-        console.log(this.people);
+        console.log('hello');
+        // console.log(this.people[0]);
 
         let dom = template();
+        console.log('dom', dom);
         return dom;
     }
 }
