@@ -16,12 +16,16 @@ let template = function(person) {
 export default class Pic {
     constructor(props) {
         this.person = props.person;
-        this.onSelect = props.onSelect;
+        this.handleClicksPics = props.handleClicksPics;
     }
 
     render() {
         let dom = template(this.person);
-
+        this.div = dom.querySelector('div.image');
+        this.div.addEventListener('click', () => {
+            this.handleClicksPics(this.person);
+        });
         return dom;
     }
 }
+

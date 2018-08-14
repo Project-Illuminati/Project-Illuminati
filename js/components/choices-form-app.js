@@ -38,9 +38,14 @@ export default class App {
 
         let choicesForm = new ChoicesForm({
             suitors: suitors,
-            handleClicks: (person) => {
+            handleClicksBios: (person) => {
                 let chooser = this.people[this.people.length - 1];
                 chooser.bio_picks.push(person);
+                console.log(chooser);
+            },
+            handleClicksPics: (person) => {
+                let chooser = this.people[this.people.length - 1];
+                chooser.pic_picks.push(person);
                 console.log(chooser);
             },
             handleDone: () => {

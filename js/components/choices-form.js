@@ -16,7 +16,8 @@ let template = function() {
 
 export default class ChoicesForm {
     constructor(props) {
-        this.handleClicks = props.handleClicks;
+        this.handleClicksBios = props.handleClicksBios;
+        this.handleClicksPics = props.handleClicksPics;
         this.handleDone = props.handleDone;
         this.suitors = props.suitors;
     }
@@ -29,7 +30,7 @@ export default class ChoicesForm {
         for(let i = 0; i < this.suitors.length; i++) {
             let bio = new Bio({
                 person: this.suitors[i],
-                handleClicks: this.handleClicks
+                handleClicksBios: this.handleClicksBios
             });
             this.form.appendChild(bio.render());
         }
@@ -55,7 +56,7 @@ export default class ChoicesForm {
         for(let i = 0; i < this.suitors.length; i++) {
             let pic = new Pic({
                 person: this.suitors[i],
-                handleClicks: this.handleClicks
+                handleClicksPics: this.handleClicksPics
             });
             this.form.appendChild(pic.render());
         }

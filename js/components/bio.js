@@ -18,14 +18,14 @@ let template = function(person) {
 export default class Bio {
     constructor(props) {
         this.person = props.person;
-        this.handleClicks = props.handleClicks;
+        this.handleClicksBios = props.handleClicksBios;
     }
 
     render() {
         let dom = template(this.person);
         this.div = dom.querySelector('div.bio');
         this.div.addEventListener('click', () => {
-            this.handleClicks(this.person);
+            this.handleClicksBios(this.person);
         });
         return dom;
     }
