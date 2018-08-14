@@ -54,9 +54,6 @@ export default class ProfileInputForm {
         this.people = props.people;
         this.onSubmit = props.onSubmit;
     }
-    redirect() {
-        console.log('redirecting');
-    }
     render() {
         let dom = template();
 
