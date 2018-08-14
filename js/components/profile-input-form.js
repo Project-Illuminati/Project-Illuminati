@@ -18,7 +18,12 @@ let template = function() {
                 <option value="200K+">200K+</option>
             </select><br>
         <label>Fertility</label>
-            <input type="range" min="1" max="5" id="fertility"><br>
+            <input type ="range" max="5" min="1"
+            oninput="document.getElementById('fertilityRangeLabel').innerHTML = this.value;"
+            step="1" name="rangeVal" id="fertility" value="3">
+            </input>
+            <em id="fertilityRangeLabel" style="font-style: normal;"></em>
+            <br>
         <label>Favorite Book</label>
             <select id="book">
                 <option value="If I Did It by OJ Simpson">If I Did It by OJ Simpson</option>
@@ -29,12 +34,17 @@ let template = function() {
                 <option value="An Inconvenient Truth by Al Gore">An Inconvenient Truth by Al Gore</option>
             </select><br>
         <label>How would your best friend describe you?</label>
-            <textarea name="summary" rows="3" cols="30"></textarea><br>
+            <textarea name="bio" rows="3" cols="30"></textarea><br>
         <label>Insert a URL of a recent picture of yourself.</label>
-            <input name="pic" type="text"><br>
-        <label>What ladder number do you think you are?</label>
-            <input type="range" min="1" max="5" id="ladder"><br>
-        <input type="submit">
+            <input name="pic" type="text"><br> <br>
+        <label>What ladder number do you think you are?</label> <br>
+            <input type ="range" max="10" min="0"
+                oninput="document.getElementById('rangeValLabel').innerHTML = this.value;"
+                step="1" name="rangeVal" id="ladder_guess" value="5">
+            </input>
+            <em id="rangeValLabel" style="font-style: normal;"></em>
+            <br>
+        <input type="submit" onclick="window.location.href='../../choices-form.html'">
     </form>`;
 
 };
@@ -44,10 +54,8 @@ export default class ProfileInputForm {
         this.people = props.people;
         this.onSubmit = props.onSubmit;
     }
-
     redirect() {
-        console.log('go to choices page');
-        console.log(this.people);
+        console.log('redirecting');
     }
     render() {
         let dom = template();
@@ -64,23 +72,23 @@ export default class ProfileInputForm {
             let income = elements.income.value;
             let fertility = elements.fertility.value;
             let book = elements.book.value;
-            let bio = elements.summary.value;
+            let bio = elements.bio.value;
             let pic = elements.pic.value;
-            let ladder = elements.ladder.value;
+            let ladder = parseInt(elements.ladder_guess.value);
 
-            this.person = { name: name,
+            let person = { name: name,
                 income: income,
                 fertility: fertility,
                 book: book,
                 bio: bio,
                 pic: pic,
-                ladder: ladder,
+                ladder_guess: ladder,
                 bio_picks: [],
                 pic_picks: [] };
 
             try {
-                this.onSubmit(this.people);
                 // #4 Process success or failure
+                this.onSubmit(person);
                 this.form.reset();
                 document.activeElement.blur();
             }
@@ -88,8 +96,6 @@ export default class ProfileInputForm {
                 // #4 Process success or failure
                 console.log(err.message);
             }
-
-            this.people.push(this.person);
 
         });
 

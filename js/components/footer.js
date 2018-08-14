@@ -9,9 +9,6 @@ let template = function() {
 };
 
 export default class Footer {
-    constructor(props) {
-
-    }
 
     render() {
         let dom = template();

@@ -4,7 +4,7 @@ let template = function() {
     return html`
     <header>
         <ul>
-            <li class="center"><a href="about.html">Project Illuminati</a></li>
+            <li class="center"><a href="landing.html">Project Illuminati</a></li>
             <li class="right"><a href="about.html">About Us</a></li>
         </ul>
     </header>
@@ -12,9 +12,6 @@ let template = function() {
 };
 
 export default class Header {
-    constructor(props) {
-
-    }
 
     render() {
         let dom = template();
