@@ -6,7 +6,6 @@ import html from '../html.js';
 let template = function(person) {
     return html`
         <div class="image">
-        <input type="checkbox" name="pic" id="pic" value="${person.name}"/>
             <label>
                 <figure> <img src="${person.pic}" alt="${person.name}" width="200"> </figure>
             </label>
@@ -17,12 +16,16 @@ let template = function(person) {
 export default class Pic {
     constructor(props) {
         this.person = props.person;
-        this.onSelect = props.onSelect;
+        this.handleClicksPics = props.handleClicksPics;
     }
 
     render() {
         let dom = template(this.person);
-
+        this.div = dom.querySelector('div.image');
+        this.div.addEventListener('click', () => {
+            this.handleClicksPics(this.person);
+        });
         return dom;
     }
 }
+
