@@ -5,6 +5,7 @@ import Header from './header.js';
 // import Footer from './footer.js';
 import RandomLadderNumber from './random-ladder-number.js';
 import peopleApi from '../services/people-api.js';
+import ChoicesForm from './choices-form.js';
 
 let template = function() {
     return html`
@@ -34,6 +35,13 @@ export default class App {
         // find suitors in this range
         let suitors = findSuitors(this.people);
         console.log(suitors);
+
+        let choicesForm = new ChoicesForm({
+            suitors: suitors,
+        });
+        this.main.appendChild(choicesForm.render());
+
+
 
         // append footer
         // let footer = new Footer();

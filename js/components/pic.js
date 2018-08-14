@@ -6,7 +6,10 @@ import html from '../html.js';
 let template = function(person) {
     return html`
         <div class="image">
-        <figure> <img src="${person.pic}" alt="${person.name}" width="200"> </figure>
+        <input type="checkbox" name="pic" id="pic" value="${person.name}"/>
+            <label>
+                <figure> <img src="${person.pic}" alt="${person.name}" width="200"> </figure>
+            </label>
         </div>
     `;
 };
