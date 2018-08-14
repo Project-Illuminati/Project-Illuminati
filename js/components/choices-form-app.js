@@ -38,6 +38,21 @@ export default class App {
 
         let choicesForm = new ChoicesForm({
             suitors: suitors,
+            handleClicks: (person) => {
+                let chooser = this.people[this.people.length - 1];
+                chooser.bio_picks.push(person);
+                console.log(chooser);
+            },
+            handleDone: () => {
+                console.log('inside handle done');
+                //for version 2, let's remove dups
+                // let chooser = this.people[this.people.length - 1];
+                // let myset = new Set(chooser.bio_picks);
+                // console.log('myset', myset);
+
+                // clear page and load pics
+
+            }
         });
         this.main.appendChild(choicesForm.render());
 
