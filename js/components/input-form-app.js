@@ -22,10 +22,7 @@ export default class App {
 
         this.main = dom.querySelector('main');
         let profileInputForm = new ProfileInputForm({
-            people: this.people,
-            onSubmit: function() {
-                profileInputForm.redirect();
-            }
+            people: this.people
         });
         this.main.appendChild(profileInputForm.render());
 
