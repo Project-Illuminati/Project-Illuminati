@@ -9,9 +9,10 @@ import Pic from './pic.js';
 let template = function() {
     return html`    
     <div class="choice-form">
-        <label><button id="done">Submit</label>
-    </div>`;
-
+    <label><button class="done">Submit</label>
+    </div>
+    <label><button class="redirect" onclick="window.location.href='../../results.html'">Show me my matches!</label>
+    `;
 };
 
 export default class ChoicesForm {
@@ -35,11 +36,20 @@ export default class ChoicesForm {
             this.form.appendChild(bio.render());
         }
 
-        let button = dom.querySelector('button');
-        button.addEventListener('click', () => {
+        let firstButton = dom.querySelector('button.done');
+        firstButton.addEventListener('click', () => {
             this.handleDone();
-            console.log('button');
+            console.log('button.done');
+            secondButton.hidden = false;
 
+        });
+
+
+        let secondButton = dom.querySelector('button.redirect');
+        secondButton.hidden = true;
+        secondButton.addEventListener('click', () => {
+            this.handleDone();
+            console.log('button.redirect');
         });
 
         return dom;
@@ -60,5 +70,7 @@ export default class ChoicesForm {
             });
             this.form.appendChild(pic.render());
         }
+
+
     }
 }
