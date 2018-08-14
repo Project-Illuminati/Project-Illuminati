@@ -6,7 +6,6 @@ import html from '../html.js';
 let template = function(person) {
     return html`
         <div class="image">
-        <input type="checkbox" name="pic" id="pic" value="${person.name}"/>
             <label>
                 <figure> <img src="${person.pic}" alt="${person.name}" width="200"> </figure>
             </label>

@@ -45,6 +45,9 @@ export default class App {
             },
             handleDone: () => {
                 console.log('inside handle done');
+                choicesForm.update({
+                    people: this.people
+                });
                 //for version 2, let's remove dups
                 // let chooser = this.people[this.people.length - 1];
                 // let myset = new Set(chooser.bio_picks);
