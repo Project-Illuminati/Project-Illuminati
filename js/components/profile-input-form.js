@@ -18,7 +18,12 @@ let template = function() {
                 <option value="200K+">200K+</option>
             </select><br>
         <label>Fertility</label>
-            <input type="range" min="1" max="5" id="fertility"><br>
+            <input type ="range" max="5" min="1"
+            oninput="document.getElementById('fertilityRangeLabel').innerHTML = this.value;"
+            step="1" name="rangeVal" id="fertility" value="3">
+            </input>
+            <em id="fertilityRangeLabel" style="font-style: normal;"></em>
+            <br>
         <label>Favorite Book</label>
             <select id="book">
                 <option value="If I Did It by OJ Simpson">If I Did It by OJ Simpson</option>
@@ -31,10 +36,15 @@ let template = function() {
         <label>How would your best friend describe you?</label>
             <textarea name="bio" rows="3" cols="30"></textarea><br>
         <label>Insert a URL of a recent picture of yourself.</label>
-            <input name="pic" type="text"><br>
-        <label>What ladder number do you think you are?</label>
-            <input type="range" min="0" max="10" id="ladder_guess"><br>
-        <input type="submit" onclick="window.location.href='../../results.html'">
+            <input name="pic" type="text"><br> <br>
+        <label>What ladder number do you think you are?</label> <br>
+            <input type ="range" max="10" min="0"
+                oninput="document.getElementById('rangeValLabel').innerHTML = this.value;"
+                step="1" name="rangeVal" id="ladder_guess" value="5">
+            </input>
+            <em id="rangeValLabel" style="font-style: normal;"></em>
+            <br>
+        <input type="submit" onclick="window.location.href='../../choices-form.html'">
     </form>`;
 
 };
@@ -66,7 +76,7 @@ export default class ProfileInputForm {
             let pic = elements.pic.value;
             let ladder = parseInt(elements.ladder_guess.value);
 
-            this.person = { name: name,
+            let person = { name: name,
                 income: income,
                 fertility: fertility,
                 book: book,
@@ -78,8 +88,7 @@ export default class ProfileInputForm {
 
             try {
                 // #4 Process success or failure
-                this.people.push(this.person);
-                console.log('last user entry', this.people[this.people.length - 1]);
+                this.onSubmit(person);
                 this.form.reset();
                 document.activeElement.blur();
             }
