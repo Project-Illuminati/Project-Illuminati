@@ -6,7 +6,6 @@ import html from '../html.js';
 let template = function(person) {
     return html`
     <div class="bio">
-            Name: ${person.name}
             Income: ${person.income}
             Fertility: ${person.fertility}
             Favorite Book: ${person.book}

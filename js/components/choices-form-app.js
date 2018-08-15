@@ -2,7 +2,7 @@
 
 import html from '/js/html.js';
 import Header from './header.js';
-// import Footer from './footer.js';
+import Footer from './footer.js';
 import RandomLadderNumber from './random-ladder-number.js';
 import peopleApi from '../services/people-api.js';
 import ChoicesForm from './choices-form.js';
@@ -53,22 +53,14 @@ export default class App {
                 choicesForm.update({
                     people: this.people
                 });
-                //for version 2, let's remove dups
-                // let chooser = this.people[this.people.length - 1];
-                // let myset = new Set(chooser.bio_picks);
-                // console.log('myset', myset);
-
-                // clear page and load pics
 
             }
         });
         this.main.appendChild(choicesForm.render());
 
-
-
         // append footer
-        // let footer = new Footer();
-        // this.main.appendChild(footer.render());
+        let footer = new Footer();
+        this.main.appendChild(footer.render());
         return dom;
 
     }

@@ -5,7 +5,8 @@ import peopleApi from '../services/people-api.js';
 import Header from './header.js';
 import Bio from './bio.js';
 import Pic from './pic.js';
-// import Footer from './footer.js';
+import Footer from './footer.js';
+import Loser from './loser.js';
 
 let template = function() {
     return html`
@@ -57,15 +58,15 @@ export default class App {
                 this.main.appendChild(pic.render());
             }
         }
+        if(!matches.length){
+            let loser = new Loser();
+            this.main.appendChild(loser.render());
 
-        // // append footer
-        // let footer = new Footer();
-        // this.main.appendChild(footer.render());
+        }
 
-        // get product data from local storage
-
-
-
+        // append footer
+        let footer = new Footer();
+        this.main.appendChild(footer.render());
 
         return dom;
     }
