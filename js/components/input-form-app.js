@@ -8,7 +8,7 @@ import Footer from './footer.js';
 
 let template = function() {
     return html`    
-    <main>
+    <main class="grid">
     </main>`;
 
 };

@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+}
+  
+body {
+    background:white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 100%;
+}
+
+h2 {
+    font-size: 2.0rem;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.1em;
+    text-align: center;
+    vertical-align: top;
+}
+
+img {
+    width: 40vw;
+}
+/**************************/
+/* Nav bar ***************/
+.menu-toggle {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-content {
+    display: flex;
+    width: 90%;
+    /* flex-direction: column; */
+    /* margin-left: 5%; */
+    margin-right: 5%;
+    align-items: center;
+}
+
+.logo-left {
+    /* align-self: flex-start; */
+    margin-right: auto;
+}
+
+.aboutus-right{
+    /* align-self: flex-end;
+    justify-self:flex-end;
+    color:orange; */
+    font-size: 20pt;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+/* 
+.menu-content a {
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size:30pt;
+    
+} */
+
+a:visited {color:black;
+    text-decoration: none;
+}
+a:link {color:black;
+    text-decoration: none;
+}
+
+.logo {
+    width: 25vw;
+}
+
+nav:hover .menu-content {
+    display: flex;
+    color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 30vh 80vh 5vh;
+    grid-template-areas: 
+                        'nav nav'
+                        'content content'
+                        'footer footer';
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vh;
+}
+
+
+.grid .nav {
+    grid-area: nav;
+}
+
+.grid .content {
+    grid-area: content;
+}
+
+.grid .footer {
+    grid-area: footer;
+    position: fixed;
+    bottom: 0px;
+}
+
+
+.form-contents {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90% 20%;
+    grid-template-areas: 'form-questions'
+                         'button-container';
+}
+
+.form-questions {
+    /* font-size: 30pt; */
+    /* align-self: flex-start; */
+    grid-area: form-questions;
+    /* justify-self: center; */
+}  
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}
+
+.button-container {
+    align-self: center;
+    grid-area: button-container;
+    justify-self: center;
+}  
+
+  button {
+    border: 3px solid #96d1f8;
+    background: #e80c7a;
+    padding: 14.5px 29px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+}
+
+.button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
+
+.picture {
+    display:flex;
+}
+
+.picture-container {
+    align-self: center;
+}
+
+@supports ((display: -ms-grid) or (display: grid)) {
+    @media (max-width: 500px) {
+        /* nav bar */
+        .menu-toggle {
+            display: flex;
+            justify-content: center;
+        }
+        .menu-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .menu-content a {
+            padding-top: 5px 0;
+        }
+    }
+}
+
+
+form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 550px;
+	height: 270px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* radio */
+fieldset {
+	width: 100%;
+    text-align: left;
+}
+
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] label {
+		color: white;
+		font-weight: bold;
+		font-size: 1rem;
+		cursor: pointer;
+		user-select: none;
+		padding-left: 20px;
+        padding-right: 20px;
+}
+
+
+/* input */
+section.input-container label{
+		position: relative;
+        display: block;
+        align-items: left;
+}
+section.input-container label input {
+        display: block;
+        padding: 20px;
+        width: 300px;
+        margin-bottom: 10px;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+        background-color: white;
+        font-weight: bold;
+        color:#e80c7a;
+}
+section.input-container label input &::placeholder {
+        transition: all 0.2s ease-in-out;
+        color: #D3D3D3;
+        font-weight: bold;
+}
+section.input-container label input &:focus, &.populated {
+				padding-top: 28px;
+                padding-bottom: 12px;
+}
+
+
+section.input-container label span {
+        font-size: .8rem;
+        color: #A9A9A9;
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+}
+
+fieldset {
+    border: 0;
+    width: 300px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    color:#484848;
+}
+
+#input-form-button {
+    border: 3px solid #96d1f8;
+    background: #e80c7a;
+    padding: 14.5px 29px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+
+section.input-container label textarea {
+    display: block;
+    padding: 20px;
+    width: 300px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+    font-weight: bold;
+    color:#e80c7a;
+}
+section.input-container label textarea &::placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #D3D3D3;
+    font-weight: bold;
+}
+section.input-container label textarea &:focus, &.populated {
+            padding-top: 28px;
+            padding-bottom: 12px;
+}
