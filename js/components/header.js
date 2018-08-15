@@ -2,12 +2,19 @@ import html from '/js/html.js';
 
 let template = function() {
     return html`
-    <header>
-        <ul>
-            <li class="center"><a href="landing.html">Project Illuminati</a></li>
-            <li class="right"><a href="about.html">About Us</a></li>
-        </ul>
-    </header>
+        <div class ="nav"> 
+        <nav>  
+            <span class="menu-toggle">Menu</span>
+            <div class="menu-content">
+                <div class="logo-left">
+                    <a href="landing.html"><img class="logo" src="img/ladder2.png"></a>
+                </div>
+                <div class="aboutus-right">
+                    <a href="about.html">About Us</a>
+                </div>
+            </div>
+        </nav>
+    </div>
    `;
 };
 

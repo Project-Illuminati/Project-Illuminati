@@ -1,22 +1,25 @@
-import html from '/js/html.js';
-import Footer from '../components/footer.js';
-import Header from '../components/header.js';
+import html from '../html.js';
+import Header from './header.js';
+import Footer from './footer.js';
 
 let template = function() {
     return html`
-        <div class="header">
+        <main class="grid">
+            <div class="content">
+                <div class="welcome-text">
+                    <p>Meet like-minded, fertile celebrities nearby that are just as beautiful as you.</p>
+                </div>
+                <div class="button-container">
+                    <button onclick="window.location.href='../../input-form.html'">Get Started</button>
+                </div>
 
-        </div>
-        <main>
-            <div class="splash">
-                <p>Online dating is terrible... don't do it!</p>
-                <p>Some junk about how celebrities are terrible people, and so are you</p>
-                <button>Get Started</button>
+            </div>
+            <div class="picture">
+                <div class="picture-container">
+                    <img src='./img/welcomephoto.png'>
+                </div>
             </div>
         </main>
-        <div class="footer">
-
-        </div>
     `;
 };
 
@@ -27,14 +30,13 @@ export default class App {
 
     render() {
         let dom = template();
-        let head = dom.querySelector('.header');
-        let foot = dom.querySelector('.footer');
+        let main = dom.querySelector('main');
 
         let header = new Header();
         let footer = new Footer();
 
-        head.appendChild(header.render());
-        foot.appendChild(footer.render());
+        main.appendChild(header.render());
+        main.appendChild(footer.render());
 
         return dom;
     }
