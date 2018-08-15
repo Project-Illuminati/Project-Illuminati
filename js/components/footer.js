@@ -3,7 +3,7 @@ import html from '/js/html.js';
 let template = function() {
     return html`
     <footer class="footer">
-        <img src="css/facebook-wrap.png" class="social-icon"><img src="css/twitter-wrap.png" class="social-icon">
+        <img src="img/facebook.png" class="social-icon"><img src="img/twitter.png" class="social-icon"><img src="img/instagram.png" class="social-icon">
     </footer>
    `;
 };
