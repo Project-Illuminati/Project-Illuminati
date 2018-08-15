@@ -12,12 +12,6 @@ body {
     margin-right: 5%;
 }
 
-footer {
-    text-align: center;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 100%;
-}
-
 h2 {
     font-size: 2.0rem;
     margin: 0;
@@ -27,11 +21,12 @@ h2 {
     vertical-align: top;
 }
 
-img {
+/* img {
     width: 40vw;
-}
+} */
 /**************************/
 /* Nav bar ***************/
+
 .menu-toggle {
     padding: 10px;
     display: block;
@@ -42,11 +37,12 @@ img {
 
 .menu-content {
     display: flex;
-    width: 90%;
+    width: 100%;
     /* flex-direction: column; */
     /* margin-left: 5%; */
     margin-right: 5%;
     align-items: center;
+    border-bottom: 1px solid #E80C7A;
 }
 
 .logo-left {
@@ -61,6 +57,7 @@ img {
     font-size: 20pt;
     text-decoration: none;
     margin-left: auto;
+    padding-right: 2%;
 }
 
 /* 
@@ -73,10 +70,11 @@ img {
     
 } */
 
-a:visited {color:black;
+a:link {color:black;
     text-decoration: none;
 }
-a:link {color:black;
+
+a:visited {color:black;
     text-decoration: none;
 }
 
@@ -89,10 +87,12 @@ nav:hover .menu-content {
     color: black;
 }
 
+/****** grid *******/
+
 .grid {
     display: grid;
     grid-template-columns: 45vw 45vw;
-    grid-template-rows: 30vh 50vh 5vh;
+    grid-template-rows: 14vh 73vh 7vh;
     grid-template-areas: 
                         'nav nav'
                         'content picture'
@@ -117,7 +117,11 @@ nav:hover .menu-content {
 
 .grid .picture {
     grid-area: picture;
-    justify-self: center;
+    justify-self: right;
+    background-image: url(/img/heart.png);
+    background-position: center;
+    background-size: cover;
+    width: 42vw;
 }
 
 .grid .footer {
@@ -126,17 +130,10 @@ nav:hover .menu-content {
     bottom: 0px;
 }
 
-  
-.social-icon {
-    width: 20px;
-    height: 20px;
-    margin: 0px 5px;
-}
-
 .content {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 20% 50%;
+    grid-template-rows: 55% 40%;
     grid-template-areas: 'welcome-text'
                          'button-container';
     grid-column-gap: 2vw;
@@ -144,13 +141,19 @@ nav:hover .menu-content {
 
 .welcome-text {
     font-size: 30pt;
-    align-self: flex-start;
+    /* align-items: center; */
+    /* justify-self: center; */
+    align-self: flex-end;
+    text-align: center;
     grid-area: welcome-text;
-    justify-self: center;
 }  
 
+/* .welcome-text span {
+    font-weight: bold;
+} */
+
 .button-container {
-    align-self: flex-end;
+    align-self: flex-start;
     grid-area: button-container;
     justify-self: center;
 }  
@@ -187,6 +190,25 @@ nav:hover .menu-content {
 .picture-container {
     align-self: center;
 }
+
+/* footer */
+
+footer {
+    text-align: left;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 100%;
+    border-top: 1px solid #E80C7A;
+    width: 91%;
+}
+
+.social-icon {
+    width: 35px;
+    margin: 0px 5px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
 
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {
