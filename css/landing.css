@@ -267,6 +267,7 @@ footer {
             background-position: center;
             background-size: cover;
             width: 100vw;
+            /* this is a message */
         }
 
         img {width: 50px;}
