@@ -33,22 +33,22 @@ h2 {
     vertical-align: top;
 }
 
-figure {
-    margin: 2%; 
-}
-  
-img {
-    display: block;
-    width: 35%;
-    height: 35%;
-    -webkit-box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15);
-            box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15); 
-    justify-items: center;
-    align-self: center;
+/* footer */
+
+footer {
+    text-align: left;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 100%;
+    border-top: 1px solid #E80C7A;
+    width: 100%;
 }
 
-/*************************
-
+.social-icon {
+    width: 35px;
+    margin: 0px 5px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
 
 /* Nav bar ***************/
 
@@ -105,7 +105,7 @@ nav:hover .menu-content {
 main {
     display: grid;
     grid-template-columns: 90vw;
-    grid-template-rows: 14vh 80vh 7vh;
+    grid-template-rows: 20vh 700vh 7vh;
     grid-template-areas: 
                         'nav'
                         'results-content'
@@ -125,44 +125,45 @@ main .results-content {
 
 main .footer {
     grid-area: footer;
+    align-self: flex-end;
+    /* position: fixed;
+    bottom: 0px;
+    height: 5%; */
 }
-
 
 .results-content {
-    /* autoprefixer: off */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-template-rows: repeat(auto-fit, minmax(80vh, 80vh)); 
 }
   
-/* .bio-image-combo {
-    display: grid;
-    grid-template-columns: 90vw;
-    grid-template-rows: 2vh 5vh 5vh;
-    grid-template-areas: 'celeb-name'
-                        'bio'
-                        'image';
-    grid-column-gap: 1vw;
-    grid-row-gap: 2vh;
+.bio-pic-combo {
+    display: flex;
+    flex-direction: column;
 
 }
 
-.bio-image-combo .celeb-name {
-    grid-area: celeb-name;
+.bio-pic-combo  {
+    border: 1px solid #E80C7A;
+    margin: 5px;
+    align-items: center;
 }
 
-.bio-image-combo .bio {
+.celeb-name {
+    align-self: center;
+
+}
+.bio {
     grid-area: bio;
+    height: 30vh;
+    padding-left: 10%;
+    padding-right: 5%;
+    word-wrap: break-word;
 }
 
-.bio-image-combo .image {
-    grid-area: image;
-} */
-
-.image{
-border-bottom: 1px solid #E80C7A;
-}
-
-
+.bio-pic-combo .image {
+    align-self: center;
+} 
 
 @supports (display: grid) {
     .warning {
@@ -208,21 +209,6 @@ border-bottom: 1px solid #E80C7A;
     justify-self: end;
 }
 
-/* footer */
-
-footer {
-    text-align: left;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 100%;
-    border-top: 1px solid #E80C7A;
-    width: 100%;
-}
-
-.social-icon {
-    display: inline;
-    margin: 0px 5px;
-    box-shadow: none;
-}
 
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {

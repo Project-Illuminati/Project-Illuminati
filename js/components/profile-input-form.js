@@ -129,7 +129,7 @@ export default class ProfileInputForm {
             // #2 Gather up data
             let elements = this.form.elements;
             let name = elements.name.value;
-            let income = elements.income.value;
+            let income = elements.incomestatus.value;
             let fertility = elements.fertility.value;
             let book = elements.book.value;
             let bio = elements.bio.value;
