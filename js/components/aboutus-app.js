@@ -1,4 +1,4 @@
-import html from '/js/html.js';
+import html from '../html.js';
 import Footer from '../components/footer.js';
 import Header from '../components/header.js';
 
