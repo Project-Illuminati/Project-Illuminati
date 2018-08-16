@@ -125,7 +125,6 @@ nav:hover .menu-content {
     position: fixed;
     bottom: 0px;
 }
-
   
 .social-icon {
     width: 20px;
@@ -186,6 +185,22 @@ nav:hover .menu-content {
 
 .picture-container {
     align-self: center;
+}
+
+.bio-pic {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    float: left;
+}
+
+.container {
+    float: left;
+    padding: 10px;
+}
+
+#right-pic {
+    float: right;
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {
