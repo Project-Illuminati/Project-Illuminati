@@ -23,7 +23,7 @@ body {
 main {
     display: grid;
     grid-template-columns: 90vw;
-    grid-template-rows: 14vh 300vh 7vh;
+    grid-template-rows: 14vh auto 7vh;
     grid-template-areas: 
                         'nav'
                         'results-content'
@@ -57,22 +57,68 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
 }
   
+bio-image-combo {
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 2vh 5vh 5vh;
+    grid-template-areas: 'celeb-name'
+                        'bio'
+                        'image';
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vh;
+ }
 .bio-pic-combo {
-    border: 1px solid #E80C7A;
-    margin: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
     display: flex;
     flex-direction: column;
 }
+.bio-image-combo .celeb-name {
+    grid-area: celeb-name;
+}
+ .bio-image-combo .bio {
+    grid-area: bio;
+ }
+.bio-pic-combo  {
+    border: 1px solid #E80C7A;
+    margin: 5px;
+    align-items: center;
+}
+ .bio-image-combo .image {
+    grid-area: image;
+} 
+.celeb-name {
+    align-self: center;
+}
+
+.bio {
+    grid-area: bio;
+    height: 30vh;
+    padding-left: 10%;
+    padding-right: 5%;
+    word-wrap: break-word;
+}
+ .bio-pic-combo .image {
+    align-self: center;
+} 
+
+
+/* .bio-pic-combo {
+    border: 1px solid #E80C7A;
+    margin: 2%;
+    padding-left: 5%;
+    padding-right: 5%; 
+    display: flex;
+    flex-direction: column;
+
+}
 
 .bio-pic-combo .celeb-name {
+    justify-self: center;
     align-self: flex-start;
 }
 
 .bio-pic-combo .image {
     align-self: flex-end;
-}
+} */
 
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {
