@@ -4,8 +4,7 @@ import html from '../html.js';
 import peopleApi from '../services/people-api.js';
 import Header from './header.js';
 import Footer from './footer.js';
-import Bio from './bio.js';
-import Pic from './pic.js';
+import BioPicCombo from './results-component.js';
 import Loser from './loser.js';
 
 let template = function() {

@@ -13,7 +13,7 @@ let template = function() {
             <div class="choice-form"></div>
             <label><button class="done">Submit</label>
         </div>
-        <label><button class="redirect" id="redirect" onclick="window.location.href='../../results.html'">Show me my matches!</label>
+        <label><button class="redirect" id="redirect" onclick="window.location.href='results.html'">Show me my matches!</label>
     </div>
     `;
 };
