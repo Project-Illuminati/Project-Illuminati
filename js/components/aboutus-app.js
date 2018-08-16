@@ -26,8 +26,6 @@ let template = function() {
 
                 <p>Also... I LOVE buckets. Mr. Bucket is my secret crush!</p>
 
-                <img class="bio-pic" id="right-pic" src="img/mr-bucket.jpg">
-
             </div>
             <div class="container">
                 <img class="bio-pic" src="img/ronpic.png">

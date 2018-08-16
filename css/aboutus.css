@@ -41,6 +41,7 @@ img {
 
 .container {
     float: left;
+    display: inline-block;
 }
 
 #right-pic {
