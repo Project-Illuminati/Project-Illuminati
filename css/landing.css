@@ -173,15 +173,8 @@ nav:hover .menu-content {
     vertical-align: middle;
 }
 
-.button:hover {
-    border-top-color: #28597a;
-    background: #28597a;
-    color: #ccc;
-}
-
-.button:active {
-    border-top-color: #1b435e;
-    background: #1b435e;
+button:hover {
+    background: #ce0b6d;
 }
 
 .picture {
@@ -208,8 +201,6 @@ footer {
     margin-top: 1%;
     margin-bottom: 1%;
 }
-
-
 
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {

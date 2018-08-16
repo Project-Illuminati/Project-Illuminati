@@ -102,9 +102,7 @@ h3 {
 }
 
 #input-form-button:hover {
-    border-top-color:#e80c7a;
-    background: purple;
-    color: #ccc;
+    background: #ce0b6d;
 }
 
 form {

@@ -33,7 +33,7 @@ img {
     align-self: center;
 }
 
-img:hover {
+.image:hover {
     -webkit-box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.15);
     box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.15); 
 }
@@ -84,6 +84,11 @@ a:visited {color:black;
 nav:hover .menu-content {
     display: flex;
     color: black;
+}
+
+.celeb-prop {
+    font-weight: bold;
+    margin: 0 2% 0 0;
 }
 
 /****** grid *******/
@@ -175,23 +180,27 @@ button {
     margin: 5% 0% 0% 0%;
 }  
 
+#redirect:hover {
+    background: #ce0b6d;
+}
+
 .done {
     float: right;
     padding: 10px 10px;
     margin: 5% 0% 0% 0%;
 }
 
-
-.button:hover {
-    border-top-color: #28597a;
-    background: #28597a;
-    color: #ccc;
+.done:hover {
+    background: #ce0b6d;
 }
-
-.button:active {
-    border-top-color: #1b435e;
-    background: #1b435e;
-}
+/* .button:hover {
+    background: #ce0b6d;
+} */
+/* 
+.button:active { */
+    /* border-top-color: #1b435e;
+    background: #1b435e; */
+/* } */
 
 
 /* footer */
