@@ -18,7 +18,7 @@ let template = function() {
                 <p class="bio-text">It's such a tiring job but someone has to do it.</p>
             </div>
             <div class="container">
-                <img class="bio-pic" id="right-pic" src="img/clairepic.png">
+                <img class="aboutus-right" src="img/clairepic.png">
 
                 <p>I'm an expert in ladders.</p>
 
