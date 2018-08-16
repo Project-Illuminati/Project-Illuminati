@@ -10,7 +10,7 @@ import ChoicesForm from './choices-form.js';
 let template = function() {
     return html`
     <main>
-        <div class = 'intro-message'></div>
+        <div class="intro-message"></div>
     </main>
     `;
 };
@@ -34,19 +34,16 @@ export default class App {
 
         // find suitors in this range
         let suitors = findSuitors(this.people);
-        console.log(suitors);
 
         let choicesForm = new ChoicesForm({
             suitors: suitors,
             handleClicksBios: (person) => {
                 let chooser = this.people[this.people.length - 1];
                 chooser.bio_picks.push(person);
-                console.log(chooser);
             },
             handleClicksPics: (person) => {
                 let chooser = this.people[this.people.length - 1];
                 chooser.pic_picks.push(person);
-                console.log(chooser);
             },
             handleDone: () => {
                 console.log('inside handle done');
