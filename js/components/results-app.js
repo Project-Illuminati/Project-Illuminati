@@ -11,7 +11,8 @@ import Loser from './loser.js';
 let template = function() {
     return html`
     <main>
-
+    <div class="results-content">
+    </div>
     </main>
     `;
 };
@@ -44,23 +45,20 @@ export default class App {
         }
         console.log(matches);
 
+        this.content = dom.querySelector('div.results-content');
         for(let i = 0; i < this.people.length; i++){
             let person = this.people[i];
             if(matches.includes(person.name)){
-                let bio = new Bio({
+                let bioPicCombo = new BioPicCombo({
                     person: person
                 });
-                this.main.appendChild(bio.render());
+                this.content.appendChild(bioPicCombo.render());
 
-                let pic = new Pic({
-                    person: person
-                });
-                this.main.appendChild(pic.render());
             }
         }
         if(!matches.length){
             let loser = new Loser();
-            this.main.appendChild(loser.render());
+            this.content.appendChild(loser.render());
 
         }
 

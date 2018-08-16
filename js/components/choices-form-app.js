@@ -9,7 +9,7 @@ import ChoicesForm from './choices-form.js';
 
 let template = function() {
     return html`
-    <main>
+    <main class="grid">
         <div class="intro-message"></div>
     </main>
     `;
