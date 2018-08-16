@@ -34,13 +34,13 @@ img {
 .bio-pic {
     width: 300px;
     height: 300px;
-    border: solid;
     border-width: 5px;
-    float: left;
+    padding: 15px;
 }
 
 .container {
-    float: left;
+
+    display: inline-block;
 }
 
 #right-pic {
