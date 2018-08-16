@@ -23,6 +23,9 @@ h3 {
     margin-left: 2%;
 
 }
+.menu-content {
+    width: 95%;
+}
 
 .grid2 {
     display: grid;

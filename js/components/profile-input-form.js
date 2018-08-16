@@ -21,39 +21,20 @@ let template = function() {
                     </label>
             </section>
 
-            <label> <h3 class="h3margin">2a. What is your income? </h3> </label>
+            <label> <h3 class="h3margin">2. What is your celebrity status? </h3> </label>
             <div class="radio-flex-income">
 
-                <input type="radio" name="income" id="radio-1" value="0-50K" checked/>
-                <label class="radiolabel" for="radio-1">0-50K</label>
+                <input type="radio" name="incomestatus" id="statusradio-1" value="Retired child star" checked/>
+                <label class="radiolabel" for="statusradio-1">Retired child star</label>
 
-                <input type="radio" name="income" id="radio-2" value="50-100K" />
-                <label class="radiolabel" for="radio-2">50-100K</label>
+                <input type="radio" name="incomestatus" id="statusradio-2" value="Infamous but really just misunderstood" />
+                <label class="radiolabel" for="statusradio-2">Infamous but really just misunderstood</label>
 
-                <input type="radio" name="income" id="radio-3" value="100-150K"/>
-                <label class="radiolabel" for="radio-3">100-150K</label>
+                <input type="radio" name="incomestatus" id="statusradio-3" value="Super popular on the Hallmark Channel"/>
+                <label class="radiolabel" for="statusradio-3">All press is good press</label>
 
-                <input type="radio" name="income" id="radio-4" value="150-200K"/>
-                <label class="radiolabel" for="radio-4">150-200K</label>
-
-                <input type="radio" name="income" id="radio-5" value="200K+"/>
-                <label class="radiolabel" for="radio-5">200K+</label>
-            </div>
-
-            <label> <h3 class="h3margin">2b. What is your celebrity status? </h3> </label>
-            <div class="radio-flex-income">
-
-                <input type="radio" name="incomestatus" id="statusradio-1" value="Washed Up Child Star" checked/>
-                <label class="radiolabel" for="statusradio-1">Washed Up Child Star</label>
-
-                <input type="radio" name="incomestatus" id="statusradio-2" value="Infamous" />
-                <label class="radiolabel" for="statusradio-2">Infamous</label>
-
-                <input type="radio" name="incomestatus" id="statusradio-3" value="Straight to DVD"/>
-                <label class="radiolabel" for="statusradio-3">Straight to DVD</label>
-
-                <input type="radio" name="incomestatus" id="statusradio-4" value="Relishing my 15 minutes"/>
-                <label class="radiolabel" for="statusradio-4">Relishing my 15 minutes</label>
+                <input type="radio" name="incomestatus" id="statusradio-4" value="Multihyphenate Actor/Director/Producer/Musician"/>
+                <label class="radiolabel" for="statusradio-4">Multihyphenate Actor/Director/Producer/Musician</label>
 
                 <input type="radio" name="incomestatus" id="statusradio-5" value="Friends with Bono"/>
                 <label class="radiolabel" for="statusradio-5">Friends with Bono</label>
@@ -87,9 +68,13 @@ let template = function() {
             <input type="radio" name="book" id="bookradio-5" value="If I Did It by OJ Simpson" />
             <label class="radiolabel" for="bookradio-5">If I Did It by OJ Simpson</label>
 
-            <input type="radio" name="book" id="bookradio-6" value="Leaves of Grass by Walt Whitman"/>
-            <label class="radiolabel" for="bookradio-6">Leaves of Grass by Walt Whitman</label>
+            <input type="radio" name="book" id="bookradio-6" value="The Boxcar Children"/>
+            <label class="radiolabel" for="bookradio-6">The Boxcar Children</label>
+
+            <input type="radio" name="book" id="bookradio-7" value="Leaves of Grass by Walt Whitman"/>
+            <label class="radiolabel" for="bookradio-7">Leaves of Grass by Walt Whitman</label>
             </div>
+
             <section class="input-container">
                     <label> <h3> 5. How would your celebrity best friend describe you? </h3>
                     <textarea id="textarea" placeholder="Insert bio." name="bio" rows="3" cols="30"></textarea><br>

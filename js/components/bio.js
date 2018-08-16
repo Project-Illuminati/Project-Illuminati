@@ -6,11 +6,11 @@ import html from '../html.js';
 let template = function(person) {
     return html`
     <div class="bio">
-            Income: ${person.income}
-            Fertility: ${person.fertility}
-            Favorite Book: ${person.book}
-            Bio: ${person.bio}
-            Ladder Rating: ${person.ladder_actual}
+            <p> <span class="celeb-prop"> Celebrity Status: </span> ${person.income} </p>
+            <p> <span class="celeb-prop"> Fertility: </span> ${person.fertility} </p>
+            <p> <span class="celeb-prop"> Favorite Book: </span> ${person.book} </p>
+            <p> <span class="celeb-prop"> Bio: </span> ${person.bio} </p>
+            <p> <span class="celeb-prop"> Ladder Rating: </span> ${person.ladder_actual} </p>
     </div>`;
 };
 
