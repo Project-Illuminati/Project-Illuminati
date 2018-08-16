@@ -30,7 +30,7 @@ h3 {
 .grid2 {
     display: grid;
     grid-template-columns: 90vw;
-    grid-template-rows: 14vh 200vh 7vh;
+    grid-template-rows: 14vh 220vh 7vh;
     grid-template-areas: 
                         'nav nav'
                         'formcontent formcontent'
