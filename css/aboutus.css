@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+}
+  
+body {
+    background:white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 100%;
+}
+
+h2 {
+    font-size: 2.0rem;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.1em;
+    text-align: center;
+    vertical-align: top;
+}
+
+img {
+    width: 40vw;
+}
+
+.bio-pic {
+    width: 300px;
+    height: 300px;
+    border: solid;
+    border-width: 5px;
+    float: left;
+}
+
+.container {
+    float: left;
+}
+
+#right-pic {
+    float: right;
+}
+/**************************/
+/* Nav bar ***************/
+.menu-toggle {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-content {
+    display: flex;
+    width: 90%;
+    /* flex-direction: column; */
+    /* margin-left: 5%; */
+    margin-right: 5%;
+    align-items: center;
+}
+
+.logo-left {
+    /* align-self: flex-start; */
+    margin-right: auto;
+}
+
+.aboutus-right{
+    /* align-self: flex-end;
+    justify-self:flex-end;
+    color:orange; */
+    font-size: 20pt;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+/* 
+.menu-content a {
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size:30pt;
+    
+} */
+
+a:visited {color:black;
+    text-decoration: none;
+}
+a:link {color:black;
+    text-decoration: none;
+}
+
+.logo {
+    width: 25vw;
+}
+
+nav:hover .menu-content {
+    display: flex;
+    color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: 30vh 50vh 5vh;
+    grid-template-areas: 
+                        'nav nav'
+                        'content picture'
+                        'footer footer';
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vh;
+}
+
+.grid .header {
+    grid-area: header;
+    text-align: center;
+    vertical-align: top;
+}
+
+.grid .nav {
+    grid-area: nav;
+}
+
+.grid .content {
+    grid-area: content;
+}
+
+.grid .picture {
+    grid-area: picture;
+    justify-self: center;
+}
+
+.grid .footer {
+    grid-area: footer;
+    position: absolute;
+    bottom: 0px;
+}
+
+  
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 50%;
+    grid-template-areas: 'welcome-text'
+                         'button-container';
+    grid-column-gap: 2vw;
+}
+
+.welcome-text {
+    font-size: 30pt;
+    align-self: flex-start;
+    grid-area: welcome-text;
+    justify-self: center;
+}  
+
+.button-container {
+    align-self: flex-end;
+    grid-area: button-container;
+    justify-self: center;
+}  
+
+  button {
+    border: 3px solid #96d1f8;
+    background: #e80c7a;
+    padding: 14.5px 29px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+}
+
+.button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
+
+.picture {
+    display:flex;
+}
+
+.picture-container {
+    align-self: center;
+}
+
+.container {
+    border: solid;
+}
+
+@supports ((display: -ms-grid) or (display: grid)) {
+    @media (max-width: 500px) {
+        /* nav bar */
+        .menu-toggle {
+            display: flex;
+            justify-content: center;
+        }
+        .menu-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .menu-content a {
+            padding-top: 5px 0;
+        }
+    }
+}
