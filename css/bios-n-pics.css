@@ -29,12 +29,14 @@ img {
     display: block;
     width: 100%;
     height: 100%;
-    -webkit-box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15);
-            box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15); 
     justify-items: center;
     align-self: center;
 }
 
+img:hover {
+    -webkit-box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.15); 
+}
 
 /* Nav bar ***************/
 
@@ -112,20 +114,36 @@ nav:hover .menu-content {
     grid-area: content;
 }
 
-
 .grid .footer {
     grid-area: footer;
 }
 
 .intro-message {
-    margin: 2%;
-    font-size: 20px;
+    margin: 2% 0 1% 1%;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 .choice-form {
     /* autoprefixer: off */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+}
+
+.bio {
+    border: 1px solid #E80C7A;
+    margin: 2%;
+    padding: 10% 10% 10% 15%;
+}
+
+.bio:hover {
+    -webkit-box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15); 
+}
+
+.bio::selection {
+    -webkit-box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.15); 
 }
   
 @supports (display: grid) {
@@ -154,8 +172,14 @@ button {
 #redirect {
     float: right;
     padding: 10px 10px;
-    /* margin: 20px 0px; */
+    margin: 5% 0% 0% 0%;
 }  
+
+.done {
+    float: right;
+    padding: 10px 10px;
+    margin: 5% 0% 0% 0%;
+}
 
 
 .button:hover {
