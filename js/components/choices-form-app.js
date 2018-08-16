@@ -1,6 +1,6 @@
 'use strict';
 
-import html from '/js/html.js';
+import html from '../html.js';
 import Header from './header.js';
 import Footer from './footer.js';
 import RandomLadderNumber from './random-ladder-number.js';

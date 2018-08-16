@@ -103,7 +103,7 @@ let template = function() {
 
                 </div>
                 <div class="input-button-container">
-                    <input id="input-form-button" type="submit" onclick="window.location.href='../../choices-form.html'">
+                    <input id="input-form-button" type="submit" onclick="window.location.href='choices-form.html'">
                 </div>
             </div>
         </form>
