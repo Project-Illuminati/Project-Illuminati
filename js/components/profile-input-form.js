@@ -4,50 +4,6 @@ import html from '../html.js';
 // import Header from './header.js';
 // import Footer from './footer.js';
 
-// let template = function() {
-//     return html`    
-//     <form>
-//         <label>Name:</label>
-//             <input name="name" type="text"><br>
-//         <label>Income</label>
-//             <select id="income">
-//                 <option value="0-50K">0 - 50K</option>
-//                 <option value="50-100K">50 - 100K</option>
-//                 <option value="100-150K">100 - 150K</option>
-//                 <option value="150-200K">150 - 200K</option>
-//                 <option value="200K+">200K+</option>
-//             </select><br>
-//         <label>Fertility</label>
-//             <input type ="range" max="5" min="1"
-//             oninput="document.getElementById('fertilityRangeLabel').innerHTML = this.value;"
-//             step="1" name="rangeVal" id="fertility" value="3">
-//             </input>
-//             <em id="fertilityRangeLabel" style="font-style: normal;"></em>
-//             <br>
-//         <label>Favorite Book</label>
-//             <select id="book">
-//                 <option value="If I Did It by OJ Simpson">If I Did It by OJ Simpson</option>
-//                 <option value="Awaken the Giant Within by Tony Robbins">Awaken the Giant Within by Tony Robbins</option>
-//                 <option value="Atlas Shrugged by Ayn Rand">Atlas Shrugged by Ayn Rand</option>
-//                 <option value="The Bible by God">The Bible by God</option>
-//                 <option value="Leaves of Grass by Walt Whitman">Leaves of Grass by Walt Whitman</option>
-//                 <option value="An Inconvenient Truth by Al Gore">An Inconvenient Truth by Al Gore</option>
-//             </select><br>
-//         <label>How would your best friend describe you?</label>
-//             <textarea name="bio" rows="3" cols="30"></textarea><br>
-//         <label>Insert a URL of a recent picture of yourself.</label>
-//             <input name="pic" type="text"><br> <br>
-//         <label>What ladder number do you think you are?</label> <br>
-//             <input type ="range" max="10" min="0"
-//                 oninput="document.getElementById('rangeValLabel').innerHTML = this.value;"
-//                 step="1" name="rangeVal" id="ladder_guess" value="5">
-//             </input>
-//             <em id="rangeValLabel" style="font-style: normal;"></em>
-//             <br>
-//         <input type="submit" onclick="window.location.href='../../choices-form.html'">
-//     </form>`;
-
-// };
 
 let template = function() {
     return html`    
@@ -64,28 +20,29 @@ let template = function() {
                 </section>
                 <section class="input-container">
                     <label> <h3>1. Name </h3> 
-                    <input type="text" placeholder="What is your name?" name="product_name">
+                    <input type="text" placeholder="What is your name?" name="name">
                     </label>
             </section>
 
                 <label> <h3 class="h3margin">2. What is your income? </h3> </label>
                 <div class="radio-flex-income">
-                <label for="radio-1">
-                <input type="radio" name="radio1" id="radio-1" value="0-50K"/>
-                0-50K</label>
-                <label for="radio-2">
-                <input type="radio" name="radio1" id="radio-2" value="radio-2" checked="checked"/>
-                50-100K</label>
-                <label for="radio-3">
-                <input type="radio" name="radio1" id="radio-3" value="radio-3"/>
-                100-150K</label>
-                <label for="radio-3">
-                <input type="radio" name="radio1" id="radio-4" value="radio-4"/>
-                150-200K</label>
-                <label for="radio-3">
-                <input type="radio" name="radio1" id="radio-5" value="radio-5"/>
-                200K+</label>
+
+                <input type="radio" name="income" id="radio-1" value="0-50K" checked/>
+                <label class="radiolabel" for="radio-1">0-50K</label>
+
+                <input type="radio" name="income" id="radio-2" value="50-100K" />
+                <label class="radiolabel" for="radio-2">50-100K</label>
+
+                <input type="radio" name="income" id="radio-3" value="100-150K"/>
+                <label class="radiolabel" for="radio-3">100-150K</label>
+
+                <input type="radio" name="income" id="radio-4" value="150-200K"/>
+                <label class="radiolabel" for="radio-4">150-200K</label>
+
+                <input type="radio" name="income" id="radio-5" value="200K+"/>
+                <label class="radiolabel" for="radio-5">200K+</label>
                 </div>
+
             <section class="input-container">
                     <label> <h3>3. How fertile are you? </h3></label>
                     <input type ="range" max="5" min="1"
@@ -95,39 +52,40 @@ let template = function() {
                     <em id="fertilityRangeLabel" style="font-style: normal;"></em>
                     <br>
             </section>
+
                 <label> <h3 class="h3margin"> 4. What is your favorite book? </h3> </label>
                 <div class="radio-flex-book">
-                <label for="radio-1">
-                <input type="radio" name="radio1" id="radio-1" value="0-50K"/>
-                If I Did It by OJ Simpson</label>
-                <label for="radio-2">
-                <input type="radio" name="radio1" id="radio-2" value="radio-2" checked="checked"/>
-                Awaken the Giant Within by Tony Robbins</label>
-                <label for="radio-3">
-                <input type="radio" name="radio1" id="radio-3" value="radio-3"/>
-                Atlas Shrugged by Ayn Rand</label>
-                <label for="radio-3">
-                <input type="radio" name="radio1" id="radio-4" value="radio-4"/>
-                The Bible by God</label>
-                <label for="radio-3">
-                <input type="radio" name="radio1" id="radio-5" value="radio-5"/>
-                Leaves of Grass by Walt Whitman</label>
-                <label for="radio-3">
-                <input type="radio" name="radio1" id="radio-6" value="radio-6"/>
-                An Inconvenient Truth by Al Gore</label>
+
+                <input type="radio" name="book" id="bookradio-1" value="Atlas Shrugged by Ayn Rand" checked/>
+                <label class="radiolabel" for="bookradio-1">Atlas Shrugged by Ayn Rand</label>
+
+                <input type="radio" name="book" id="bookradio-2" value="An Inconvenient Truth by Al Gore"/>
+                <label class="radiolabel" for="bookradio-2">An Inconvenient Truth by Al Gore</label>
+
+                <input type="radio" name="book" id="bookradio-3" value="Awaken the Giant Within by Tony Robbins" >
+                <label class="radiolabel" for="bookradio-3">Awaken the Giant Within by Tony Robbins</label>
+
+                <input type="radio" name="book" id="bookradio-4" value="The Bible by God"/>
+                <label class="radiolabel" for="bookradio-4">The Bible by God</label>
+
+                <input type="radio" name="book" id="bookradio-5" value="If I Did It by OJ Simpson" />
+                <label class="radiolabel" for="bookradio-5">If I Did It by OJ Simpson</label>
+
+                <input type="radio" name="book" id="bookradio-6" value="Leaves of Grass by Walt Whitman"/>
+                <label class="radiolabel" for="bookradio-6">Leaves of Grass by Walt Whitman</label>
                 </div>
             <section class="input-container">
-                    <label> <h3> 5. How would your best friend describe you? </h3>
+                    <label> <h3> 5. How would your celebrity best friend describe you? </h3>
                     <textarea placeholder="Insert bio." name="bio" rows="3" cols="30"></textarea><br>
                     </label>
             </section>
             <section class="input-container">
                     <label> <h3> 6. Picture </h3>
-                    <input type="text" placeholder="Insert a URL of a recent picture of yourself." name="product_name">
+                    <input type="text" placeholder="Insert a URL of a recent picture of yourself." name="pic">
                     </label>
             </section>
             <section class="input-container">
-                    <label><h3> 7. What ladder number do you think you are?</h3></label> <br>
+                    <label><h3> 7. What ladder number do you <em> think </em> you are?</h3></label> <br>
                     <input type ="range" max="10" min="0"
                             oninput="document.getElementById('rangeValLabel').innerHTML = this.value;"
                             step="1" name="rangeVal" id="ladder_guess" value="5">
@@ -136,12 +94,19 @@ let template = function() {
                     <br>
             </section>
                 
+
+              
+              </div>
+
+
+
                 </div>
-                <div class="button-container">
+                <div class="input-button-container">
                     <input id="input-form-button" type="submit" onclick="window.location.href='../../choices-form.html'">
                 </div>
             </div>
         </form>
+        
     </div>`;
 
 };
