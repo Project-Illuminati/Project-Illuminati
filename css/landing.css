@@ -46,30 +46,16 @@ h2 {
 }
 
 .logo-left {
-    /* align-self: flex-start; */
     margin-right: auto;
 }
 
-.aboutus-right{
-    /* align-self: flex-end;
-    justify-self:flex-end;
-    color:orange; */
+.aboutus-right {
     font-size: 20pt;
     text-decoration: none;
     margin-left: auto;
-    padding-right: 1%;
+    /* padding-right: 1%; */
     width: 20%;
 }
-
-/* 
-.menu-content a {
-    padding: 50px 0;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    font-size:30pt;
-    
-} */
 
 a:link {color:black;
     text-decoration: none;
@@ -261,6 +247,8 @@ footer {
             /* this is a message */
         }
 
-        img {width: 50px;}
+        img {
+            width: 50px;
+        }
     }
 }

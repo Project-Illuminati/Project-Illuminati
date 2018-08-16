@@ -91,6 +91,7 @@ a:visited {color:black;
 
 .logo {
     width: 25vw;
+    height: auto;
     box-shadow: none;
 }
 
@@ -98,8 +99,6 @@ nav:hover .menu-content {
     display: flex;
     color: black;
 }
-
-
 
 /****** grid *******/
 

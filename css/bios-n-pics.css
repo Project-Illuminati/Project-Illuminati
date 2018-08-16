@@ -61,7 +61,6 @@ img {
 }
 
 .aboutus-right{
-
     font-size: 20pt;
     text-decoration: none;
     margin-left: auto;
@@ -78,6 +77,7 @@ a:visited {color:black;
 
 .logo {
     width: 25vw;
+    height: auto;
     box-shadow: none;
 }
 
@@ -96,7 +96,6 @@ nav:hover .menu-content {
 .grid {
     display: grid;
     grid-template-columns: 45vw 45vw;
-    /* grid-template-rows: 14vh 15vh auto 7vh; */
     grid-template-areas: 
                         'nav nav'
                         'text text'
@@ -193,15 +192,6 @@ button {
 .done:hover {
     background: #ce0b6d;
 }
-/* .button:hover {
-    background: #ce0b6d;
-} */
-/* 
-.button:active { */
-    /* border-top-color: #1b435e;
-    background: #1b435e; */
-/* } */
-
 
 /* footer */
 
