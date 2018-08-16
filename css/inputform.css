@@ -13,6 +13,9 @@ body {
     margin-right: 10% !important;
     font: 400 .9rem system-ui;
 }
+.logo-left {
+    margin-right: auto;
+}
 
 h3 {
     font-size: 1.1rem;
