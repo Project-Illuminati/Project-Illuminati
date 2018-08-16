@@ -21,9 +21,20 @@ h2 {
     vertical-align: top;
 }
 
+figure {
+    margin: 2%; 
+}
+  
 img {
-    width: 40vw;
-} 
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15); 
+    justify-items: center;
+    align-self: center;
+}
+
 /*************************
 
 
@@ -57,7 +68,6 @@ img {
     padding-right: 2%;
 }
 
-
 a:link {color:black;
     text-decoration: none;
 }
@@ -68,12 +78,15 @@ a:visited {color:black;
 
 .logo {
     width: 25vw;
+    box-shadow: none;
 }
 
 nav:hover .menu-content {
     display: flex;
     color: black;
 }
+
+
 
 /****** grid *******/
 
@@ -116,26 +129,13 @@ nav:hover .menu-content {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
 }
   
-figure {
-    margin: 2%; 
-}
-  
-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    -webkit-box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.06); 
-    justify-items: center;
-    align-self: center;
-}
-
-  
-  @supports (display: grid) {
+@supports (display: grid) {
     .warning {
-      display: none; } 
-    }
+        display: none; 
+    } 
+}
 
+/* Button */
 
 .button-container {
     align-self: flex-start;
@@ -168,6 +168,10 @@ img {
     background: #1b435e;
 }
 
+.redirect {
+    margin: 5%;
+    justify-self: end;
+}
 
 /* footer */
 
@@ -176,17 +180,17 @@ footer {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 100%;
     border-top: 1px solid #E80C7A;
-    width: 91%;
+    width: 100%;
 }
 
 .social-icon {
     width: 35px;
+    display: inline;
     margin: 0px 5px;
     margin-top: 1%;
     margin-bottom: 1%;
+    box-shadow: none;
 }
-
-
 
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {

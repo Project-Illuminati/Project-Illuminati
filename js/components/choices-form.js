@@ -7,11 +7,13 @@ import Pic from './pic.js';
 // import Footer from './footer.js';
 
 let template = function() {
-    return html`    
-    <div class="choice-form">
-    <label><button class="done">Submit</label>
+    return html`
+    <div class="form-contents">    
+        <div class="choice-form">
+            <label><button class="done">Submit</label>
+        </div>
+        <label><button class="redirect" onclick="window.location.href='../../results.html'">Show me my matches!</label>
     </div>
-    <label><button class="redirect" onclick="window.location.href='../../results.html'">Show me my matches!</label>
     `;
 };
 
