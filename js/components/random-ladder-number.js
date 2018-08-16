@@ -1,6 +1,6 @@
 'use strict';
 
-import html from '/js/html.js';
+import html from '../html.js';
 
 let template = function(intro_message) {
     return html`
