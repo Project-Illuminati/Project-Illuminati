@@ -58,6 +58,7 @@ h2 {
     text-decoration: none;
     margin-left: auto;
     padding-right: 2%;
+    width: 20%;
 }
 
 /* 
@@ -213,6 +214,9 @@ footer {
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {
         /* nav bar */
+            img {
+            width: 5vw;
+        }
         .menu-toggle {
             display: flex;
             justify-content: center;
@@ -223,8 +227,48 @@ footer {
             align-items: center;
         }
     
-        .menu-content a {
+        .menu-content div {
             padding-top: 5px 0;
         }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: 90vw;
+            grid-template-rows: 5vh 300vh 7vh;
+            grid-template-areas: 
+                                'nav nav'
+                                'formcontent formcontent'
+                                'footer footer';
+            grid-row-gap: 2vh;
+        }
+
+        body {
+            font-size: .7rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 100vw;
+            grid-template-rows: 14vh 50vh 100vh 7vh;
+            grid-template-areas: 
+                                'nav'
+                                'content'
+                                'picture'
+                                'footer';
+            grid-column-gap: 1vw;
+            grid-row-gap: 2vh;
+
+            align-items: center;
+        }
+        
+        .grid .picture {
+            grid-area: picture;
+            justify-self: center;
+            background-image: url(/img/heart.png);
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+        }
+
+        img {width: 50px;}
     }
 }

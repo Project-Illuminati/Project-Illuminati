@@ -29,6 +29,7 @@ export default class App {
             people: this.people,
             onSubmit: (person) => {
                 peopleApi.add(person);
+                console.log('person', person);
             }
         });
         this.main.appendChild(profileInputForm.render());
