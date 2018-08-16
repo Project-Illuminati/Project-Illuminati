@@ -263,7 +263,7 @@ footer {
         .grid .picture {
             grid-area: picture;
             justify-self: center;
-            background-image: url(../img/heart.png);
+            background-image: url(img/heart.png);
             background-position: center;
             background-size: cover;
             width: 100vw;
