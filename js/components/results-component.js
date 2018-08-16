@@ -1,6 +1,6 @@
 'use strict';
 
-import html from '/js/html.js';
+import html from '../html.js';
 import Bio from './bio.js';
 import Pic from './pic.js';
 
