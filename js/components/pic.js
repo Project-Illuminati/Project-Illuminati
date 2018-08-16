@@ -6,9 +6,9 @@ import html from '../html.js';
 let template = function(person) {
     return html`
         <div class="image">
-            <label>
-                <figure> <img src="${person.pic}" alt="${person.name}" width="200"> </figure>
-            </label>
+                <label>
+                    <figure> <img src="${person.pic}" alt="${person.name}" width="200"> </figure>
+                </label>
         </div>
     `;
 };

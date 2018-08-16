@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+}
+  
+body {
+    background:white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h2 {
+    font-size: 2.0rem;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.1em;
+    text-align: center;
+    vertical-align: top;
+}
+
+figure {
+    margin: 2%; 
+}
+  
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15); 
+    justify-items: center;
+    align-self: center;
+}
+
+/*************************
+
+
+/* Nav bar ***************/
+
+.menu-toggle {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-content {
+    display: flex;
+    width: 100%;
+    margin-right: 5%;
+    align-items: center;
+    border-bottom: 1px solid #E80C7A;
+}
+
+.logo-left {
+    margin-right: auto;
+}
+
+.aboutus-right{
+
+    font-size: 20pt;
+    text-decoration: none;
+    margin-left: auto;
+    padding-right: 2%;
+}
+
+a:link {color:black;
+    text-decoration: none;
+}
+
+a:visited {color:black;
+    text-decoration: none;
+}
+
+.logo {
+    width: 25vw;
+    box-shadow: none;
+}
+
+nav:hover .menu-content {
+    display: flex;
+    color: black;
+}
+
+
+
+/****** grid *******/
+
+.grid {
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: 14vh 15vh 58vh 7vh;
+    grid-template-areas: 
+                        'nav nav'
+                        'text text'
+                        'content content'
+                        'footer footer';
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vh;
+}
+
+
+.grid .nav {
+    grid-area: nav;
+}
+
+.grid .intro-message {
+    grid-area: text;
+}
+
+.grid .choice-form {
+    grid-area: content;
+}
+
+.grid .footer {
+    grid-area: footer;
+}
+
+.intro-message {
+    margin: 2%;
+}
+.choice-form {
+    /* autoprefixer: off */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+}
+  
+@supports (display: grid) {
+    .warning {
+        display: none; 
+    } 
+}
+
+/* Button */
+
+.button-container {
+    align-self: flex-start;
+    grid-area: button-container;
+    justify-self: center;
+}  
+
+  button {
+    border: 3px solid #96d1f8;
+    background: #e80c7a;
+    padding: 14.5px 29px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+}
+
+.button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
+
+.redirect {
+    margin: 5%;
+    justify-self: end;
+}
+
+/* footer */
+
+footer {
+    text-align: left;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 100%;
+    border-top: 1px solid #E80C7A;
+    width: 100%;
+}
+
+.social-icon {
+    width: 35px;
+    display: inline;
+    margin: 0px 5px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: none;
+}
+
+@supports ((display: -ms-grid) or (display: grid)) {
+    @media (max-width: 500px) {
+        /* nav bar */
+        .menu-toggle {
+            display: flex;
+            justify-content: center;
+        }
+        .menu-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .menu-content a {
+            padding-top: 5px 0;
+        }
+    }
+}
