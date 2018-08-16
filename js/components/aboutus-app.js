@@ -28,7 +28,6 @@ let template = function() {
 
                 <img class="bio-pic" id="right-pic" src="img/mr-bucket.jpg">
 
-                <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
             </div>
             <div class="container">
                 <img class="bio-pic" src="img/ronpic.png">
