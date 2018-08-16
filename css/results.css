@@ -1,4 +1,3 @@
-
 body {
     font-weight: bold;
     text-rendering: auto;
@@ -19,27 +18,12 @@ body {
     font-weight: bold;
 }
 
-/* figure {
-    margin: 2%; 
-}
-   */
-/* img {
-    display: block;
-    width: 35%;
-    height: 35%;
-    -webkit-box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15);
-            box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15); 
-    justify-items: center;
-    align-self: center;
-} */
-
-
 /****** grid *******/
 
 main {
     display: grid;
     grid-template-columns: 90vw;
-    grid-template-rows: 14vh 200vh 7vh;
+    grid-template-rows: 14vh 300vh 7vh;
     grid-template-areas: 
                         'nav'
                         'results-content'
@@ -60,9 +44,13 @@ main .results-content {
 main .footer {
     grid-area: footer;
     align-self: flex-end;
+    border-top: 1px solid #E80C7A;
 }
 
-
+footer {
+    width: 100%;
+    border-top: none;
+}
 .results-content {
     /* autoprefixer: off */
     display: grid;
@@ -79,37 +67,12 @@ main .footer {
 }
 
 .bio-pic-combo .celeb-name {
-    /* grid-area: celeb-name; */
     align-self: flex-start;
 }
 
-.bio-pic-combo .bio {
-    /* grid-area: bio; */
-}
-
 .bio-pic-combo .image {
-    /* grid-area: image; */
-    
     align-self: flex-end;
 }
-
-
-
-/* footer */
-
-/* footer {
-    text-align: left;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 100%;
-    border-top: 1px solid #E80C7A;
-    width: 100%;
-} */
-
-/* .social-icon {
-    display: inline;
-    margin: 0px 5px;
-    box-shadow: none;
-} */
 
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {
