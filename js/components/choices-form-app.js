@@ -10,7 +10,7 @@ import ChoicesForm from './choices-form.js';
 let template = function() {
     return html`
     <main>
-        <div class = 'intro-message'></div>
+        <div class="intro-message"></div>
     </main>
     `;
 };
