@@ -1,7 +1,29 @@
+body {
+    font-weight: bold;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 .9rem system-ui;
+}
+    h3 {
+        font-size: 1.1rem;
+
+    }
+    .h3margin {
+        margin-left: 2%;
+
+    }
 .grid2 {
     display: grid;
     grid-template-columns: 90vw;
-    grid-template-rows: 14vh 100vh 7vh;
+    grid-template-rows: 14vh 150vh 7vh;
     grid-template-areas: 
                         'nav nav'
                         'formcontent formcontent'
@@ -20,10 +42,7 @@
     align-self: flex-end;
 
 }
-.formcontent{
-    border-style: solid;
-    border-width: 5px;
-}
+
 
 .grid2 .footer {
     grid-area: footer;
@@ -49,6 +68,17 @@
     grid-area: button-container;
     justify-self: center;
 }  
+.radio-flex-income {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 2%;
+}
+.radio-flex-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2%;
+}
 
 #input-form-button {
     border: 3px solid #96d1f8;
@@ -59,31 +89,20 @@
     border-radius: 8px;
     color: white;
     font-size: 16px;
-    font-family: Helvetica, Arial, Sans-Serif;
     text-decoration: none;
     vertical-align: middle;
 }
 
 form {
 	position: absolute;
-	top: 50%;
-    left: 50%;
-	transform: translate(-50%,-50%);
+	top: 0%;
+    /* left: 50%; */
+	/* transform: translate(-50%,-50%); */
 	display: flex;
 	justify-content: center;
 	align-items: center;
     flex-wrap: wrap;
     margin-top: 2%;
-}
-
-fieldset {
-    border: 0;
-    width: 100%;
-    outline: none;
-    font-weight: bold;
-    color: black;
-    width: 100%;
-    text-align: left;
 }
 
 input[type="radio"] {
@@ -99,6 +118,12 @@ input[type="radio"] label {
         padding-right: 20px;
 }
 
+section.input-container-first {
+    padding: 0%;
+}
+section.input-container {
+    padding: 2%;
+}
 section.input-container label{
     position: relative;
     display: block;
@@ -106,12 +131,12 @@ section.input-container label{
 }
 section.input-container label input {
     display: block;
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 2%;
+    padding: 10px; 
+    width: 100%; 
     background-color: white;
     font-weight: bold;
     color:#e80c7a;
+    font: 400 .9em system-ui;
 }
 
 section.input-container label span {
@@ -126,8 +151,8 @@ section.input-container label textarea {
 display: block;
 padding: 2%;
 width: 100%;
-margin-bottom: 5%;
 background-color: white;
 font-weight: bold;
 color:#e80c7a;
+font: 400 .9em system-ui;
 }

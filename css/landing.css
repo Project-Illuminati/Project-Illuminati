@@ -89,7 +89,7 @@ nav:hover .menu-content {
 
 /****** grid *******/
 
-/* .grid {
+.grid {
     display: grid;
     grid-template-columns: 45vw 45vw;
     grid-template-rows: 14vh 73vh 7vh;
@@ -137,7 +137,7 @@ nav:hover .menu-content {
     grid-template-areas: 'welcome-text'
                          'button-container';
     grid-column-gap: 2vw;
-} */
+}
 
 .welcome-text {
     font-size: 30pt;
