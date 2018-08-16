@@ -8,7 +8,7 @@ import Footer from './footer.js';
 
 let template = function() {
     return html`    
-    <main>
+    <main class="grid2">
     </main>`;
 
 };
@@ -29,6 +29,7 @@ export default class App {
             people: this.people,
             onSubmit: (person) => {
                 peopleApi.add(person);
+                console.log('person', person);
             }
         });
         this.main.appendChild(profileInputForm.render());

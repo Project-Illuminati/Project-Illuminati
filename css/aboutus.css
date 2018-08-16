@@ -12,6 +12,12 @@ body {
     margin-right: 5%;
 }
 
+footer {
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 100%;
+}
+
 h2 {
     font-size: 2.0rem;
     margin: 0;
@@ -21,12 +27,27 @@ h2 {
     vertical-align: top;
 }
 
-/* img {
+img {
     width: 40vw;
-} */
+}
+
+.bio-pic {
+    width: 300px;
+    height: 300px;
+    border: solid;
+    border-width: 5px;
+    float: left;
+}
+
+.container {
+    float: left;
+}
+
+#right-pic {
+    float: right;
+}
 /**************************/
 /* Nav bar ***************/
-
 .menu-toggle {
     padding: 10px;
     display: block;
@@ -37,12 +58,11 @@ h2 {
 
 .menu-content {
     display: flex;
-    width: 100%;
+    width: 90%;
     /* flex-direction: column; */
     /* margin-left: 5%; */
     margin-right: 5%;
     align-items: center;
-    border-bottom: 1px solid #E80C7A;
 }
 
 .logo-left {
@@ -57,8 +77,6 @@ h2 {
     font-size: 20pt;
     text-decoration: none;
     margin-left: auto;
-    padding-right: 2%;
-    width: 20%;
 }
 
 /* 
@@ -71,11 +89,10 @@ h2 {
     
 } */
 
-a:link {color:black;
+a:visited {color:black;
     text-decoration: none;
 }
-
-a:visited {color:black;
+a:link {color:black;
     text-decoration: none;
 }
 
@@ -88,12 +105,10 @@ nav:hover .menu-content {
     color: black;
 }
 
-/****** grid *******/
-
 .grid {
     display: grid;
     grid-template-columns: 45vw 45vw;
-    grid-template-rows: 14vh 73vh 7vh;
+    grid-template-rows: 30vh 50vh 5vh;
     grid-template-areas: 
                         'nav nav'
                         'content picture'
@@ -118,23 +133,26 @@ nav:hover .menu-content {
 
 .grid .picture {
     grid-area: picture;
-    justify-self: right;
-    background-image: url(/img/heart.png);
-    background-position: center;
-    background-size: cover;
-    width: 42vw;
+    justify-self: center;
 }
 
 .grid .footer {
     grid-area: footer;
-    position: fixed;
+    position: absolute;
     bottom: 0px;
+}
+
+  
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
 }
 
 .content {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 55% 40%;
+    grid-template-rows: 20% 50%;
     grid-template-areas: 'welcome-text'
                          'button-container';
     grid-column-gap: 2vw;
@@ -142,19 +160,13 @@ nav:hover .menu-content {
 
 .welcome-text {
     font-size: 30pt;
-    /* align-items: center; */
-    /* justify-self: center; */
-    align-self: flex-end;
-    text-align: center;
+    align-self: flex-start;
     grid-area: welcome-text;
+    justify-self: center;
 }  
 
-/* .welcome-text span {
-    font-weight: bold;
-} */
-
 .button-container {
-    align-self: flex-start;
+    align-self: flex-end;
     grid-area: button-container;
     justify-self: center;
 }  
@@ -192,31 +204,13 @@ nav:hover .menu-content {
     align-self: center;
 }
 
-/* footer */
-
-footer {
-    text-align: left;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 100%;
-    border-top: 1px solid #E80C7A;
-    width: 91%;
+.container {
+    border: solid;
 }
-
-.social-icon {
-    width: 35px;
-    margin: 0px 5px;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-
 
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {
         /* nav bar */
-            img {
-            width: 5vw;
-        }
         .menu-toggle {
             display: flex;
             justify-content: center;
@@ -227,48 +221,8 @@ footer {
             align-items: center;
         }
     
-        .menu-content div {
+        .menu-content a {
             padding-top: 5px 0;
         }
-
-        .grid2 {
-            display: grid;
-            grid-template-columns: 90vw;
-            grid-template-rows: 5vh 300vh 7vh;
-            grid-template-areas: 
-                                'nav nav'
-                                'formcontent formcontent'
-                                'footer footer';
-            grid-row-gap: 2vh;
-        }
-
-        body {
-            font-size: .7rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: 100vw;
-            grid-template-rows: 14vh 50vh 100vh 7vh;
-            grid-template-areas: 
-                                'nav'
-                                'content'
-                                'picture'
-                                'footer';
-            grid-column-gap: 1vw;
-            grid-row-gap: 2vh;
-
-            align-items: center;
-        }
-        
-        .grid .picture {
-            grid-area: picture;
-            justify-self: center;
-            background-image: url(/img/heart.png);
-            background-position: center;
-            background-size: cover;
-            width: 100vw;
-        }
-
-        img {width: 50px;}
     }
 }

@@ -1,0 +1,244 @@
+body {
+    font-weight: bold;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin-left: 10%;
+    margin-right: 10% !important;
+    font: 400 .9rem system-ui;
+}
+
+h3 {
+    font-size: 1.1rem;
+
+}
+
+.h3margin {
+    margin-left: 2%;
+
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 14vh 220vh 7vh;
+    grid-template-areas: 
+                        'nav nav'
+                        'formcontent formcontent'
+                        'footer footer';
+    grid-row-gap: 2vh;
+}
+
+.grid2 .nav {
+    grid-area: nav;
+}
+
+.grid2 .formcontent {
+    grid-area: formcontent;
+    align-self: flex-end;
+
+}
+
+.grid2 .footer {
+    grid-area: footer;
+}
+
+.form-contents {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 95% 5%;
+    grid-template-areas: 'form-questions'
+                         'input-button-container';
+    margin-top: 70px;
+    grid-row-gap: 5vh;
+    justify-content: center;
+}
+
+.form-questions {
+    grid-area: form-questions;
+}  
+
+.input-button-container {
+    align-self: flex-end;
+    grid-area: input-button-container;
+    justify-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}  
+.radio-flex-income {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 2%;
+}
+.radio-flex-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2%;
+}
+
+#input-form-button {
+    border: 3px solid #96d1f8;
+    background: #e80c7a;
+    padding: 14.5px 29px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#input-form-button:hover {
+    border-top-color:#e80c7a;
+    background: purple;
+    color: #ccc;
+}
+
+form {
+	position: absolute;
+	top: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+section.input-container-first {
+    padding: 0%;
+    padding-top: 2%;
+}
+
+section.input-container {
+    padding: 2%;
+}
+
+section.input-container label{
+    position: relative;
+    display: block;
+    align-items: left;
+}
+
+section.input-container label input {
+    display: block;
+    padding: 10px; 
+    width: 100%; 
+    background-color: white;
+    font-weight: bold;
+    color:#e80c7a;
+    font: 400 .9em system-ui;
+}
+
+section.input-container label span {
+    font-size: .8rem;
+    color: black;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+section.input-container label textarea {
+display: block;
+padding: 2%;
+padding-right: 500px;
+width: 100%;
+background-color: white;
+font-weight: bold;
+color:#e80c7a;
+font: 400 .9em system-ui;
+}
+
+
+input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+.radiolabel {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+input[type="radio"]:checked + .radiolabel{
+    background-color: #e80c7a;
+}
+  
+
+input[type="radio"]:hover + .radiolabel{
+    background-color: #e80c7a;
+}
+  
+@supports ((display: -ms-grid) or (display: grid)) {
+    @media (max-width: 500px) {
+        /* nav bar */
+            img {
+            width: 5vw;
+        }
+        .menu-toggle {
+            display: flex;
+            justify-content: center;
+        }
+        .menu-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .menu-content div {
+            padding-top: 5px 0;
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: 90vw;
+            grid-template-rows: 5vh 300vh 7vh;
+            grid-template-areas: 
+                                'nav nav'
+                                'formcontent formcontent'
+                                'footer footer';
+            grid-row-gap: 2vh;
+        }
+
+        h3 {
+            font-size: .8rem;
+        
+        }
+        body {
+            font-size: .7rem;
+        }
+        .radio-flex-income {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 2%;
+        }
+
+        section.input-container label textarea {
+            display: block;
+            padding: 2%;
+            width: 100%;
+            background-color: white;
+            font-weight: bold;
+            color:#e80c7a;
+            font: 400 .9em system-ui;
+            word-wrap: normal;
+            }
+    }
+}

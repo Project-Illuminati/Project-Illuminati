@@ -34,6 +34,7 @@ export default class App {
 
         // find suitors in this range
         let suitors = findSuitors(this.people);
+        console.log('suitors', suitors);
 
         let choicesForm = new ChoicesForm({
             suitors: suitors,
