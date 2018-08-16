@@ -34,19 +34,17 @@ export default class App {
 
         // find suitors in this range
         let suitors = findSuitors(this.people);
-        console.log(suitors);
+        console.log('suitors', suitors);
 
         let choicesForm = new ChoicesForm({
             suitors: suitors,
             handleClicksBios: (person) => {
                 let chooser = this.people[this.people.length - 1];
                 chooser.bio_picks.push(person);
-                console.log(chooser);
             },
             handleClicksPics: (person) => {
                 let chooser = this.people[this.people.length - 1];
                 chooser.pic_picks.push(person);
-                console.log(chooser);
             },
             handleDone: () => {
                 console.log('inside handle done');
