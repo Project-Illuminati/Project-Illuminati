@@ -7,10 +7,10 @@ import RandomLadderNumber from './random-ladder-number.js';
 import peopleApi from '../services/people-api.js';
 import ChoicesForm from './choices-form.js';
 
+// creates the html that displays the suitor bios and then suitor pictures
 let template = function() {
     return html`
     <main class="grid">
-        <div class="intro-message"></div>
     </main>
     `;
 };
@@ -36,22 +36,16 @@ export default class App {
         let suitors = findSuitors(this.people);
         console.log('suitors', suitors);
 
+        // create the "form" that lets user select bios and pics
+        // upon update, display pics instead of bios
+
         let choicesForm = new ChoicesForm({
             suitors: suitors,
-            handleClicksBios: (person) => {
-                let chooser = this.people[this.people.length - 1];
-                chooser.bio_picks.push(person);
-            },
-            handleClicksPics: (person) => {
-                let chooser = this.people[this.people.length - 1];
-                chooser.pic_picks.push(person);
-            },
+            people: this.people,
             handleDone: () => {
-                console.log('inside handle done');
                 choicesForm.update({
                     people: this.people
                 });
-
             }
         });
         this.main.appendChild(choicesForm.render());
@@ -64,6 +58,7 @@ export default class App {
     }
 }
 
+// find the available people in the user's ladder range
 function findSuitors(people) {
     let suitorArray = [];
 

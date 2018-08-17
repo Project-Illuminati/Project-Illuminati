@@ -2,6 +2,8 @@ import html from '../html.js';
 import Footer from '../components/footer.js';
 import Header from '../components/header.js';
 
+// for the about us page
+
 let template = function() {
     return html`
         <div class="header">

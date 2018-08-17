@@ -3,9 +3,8 @@
 import html from '../html.js';
 import Bio from './bio.js';
 import Pic from './pic.js';
-// import Header from './header.js';
-// import Footer from './footer.js';
 
+// creates the html that displays the "form" that allows user to choose bios and pictures
 let template = function() {
     return html`
     <div class="form-contents">    
@@ -20,58 +19,58 @@ let template = function() {
 
 export default class ChoicesForm {
     constructor(props) {
-        this.handleClicksBios = props.handleClicksBios;
-        this.handleClicksPics = props.handleClicksPics;
         this.handleDone = props.handleDone;
         this.suitors = props.suitors;
+        this.people = props.people;
     }
 
     render() {
         let dom = template();
 
+        // first display the user bios
         this.form = dom.querySelector('div.choice-form');
         this.containingFormDiv = dom.querySelector('.outer-choice-form');
 
         for(let i = 0; i < this.suitors.length; i++) {
             let bio = new Bio({
                 person: this.suitors[i],
-                handleClicksBios: this.handleClicksBios
+                people: this.people,
             });
             this.form.appendChild(bio.render());
         }
 
+        // when the user has finished selecting bios, update the page to display pics instead
         let firstButton = dom.querySelector('button.done');
         firstButton.addEventListener('click', () => {
             this.handleDone();
-            console.log('button.done');
             secondButton.hidden = false;
-
+            let message = document.getElementsByClassName('intro-message')[0];
+            message.innerHTML = 'Now choose pictures of celebs in your ladder range.';
         });
 
-
+        // when the user has finished selecting pics, redirect them to results page
         let secondButton = dom.querySelector('button.redirect');
         secondButton.hidden = true;
         secondButton.addEventListener('click', () => {
-            this.handleDone();
-            console.log('button.redirect');
         });
 
         return dom;
 
     }
 
+    // remove all bios and display pictures instead
     update(props) {
         this.people = props.people;
         this.containingFormDiv.lastElementChild.remove();
+
         while(this.form.lastElementChild){
             this.form.lastElementChild.remove();
         }
-        console.log('hey!!');
 
         for(let i = 0; i < this.suitors.length; i++) {
             let pic = new Pic({
                 person: this.suitors[i],
-                handleClicksPics: this.handleClicksPics
+                people: this.people,
             });
             this.form.appendChild(pic.render());
         }

@@ -1,5 +1,4 @@
-
-import App from './components/input-form-app.js';
+import App from './components/profile-input-form-app.js';
 
 let root = document.getElementById('root');
 let app = new App();
