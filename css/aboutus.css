@@ -34,13 +34,13 @@ img {
 .bio-pic {
     width: 300px;
     height: 300px;
-    border: solid;
     border-width: 5px;
-    float: left;
+    padding: 15px;
 }
 
 .container {
-    float: left;
+
+    display: inline-block;
 }
 
 #right-pic {
@@ -59,35 +59,20 @@ img {
 .menu-content {
     display: flex;
     width: 90%;
-    /* flex-direction: column; */
-    /* margin-left: 5%; */
     margin-right: 5%;
     align-items: center;
 }
 
 .logo-left {
-    /* align-self: flex-start; */
     margin-right: auto;
 }
 
 .aboutus-right{
-    /* align-self: flex-end;
-    justify-self:flex-end;
-    color:orange; */
+
     font-size: 20pt;
     text-decoration: none;
     margin-left: auto;
 }
-
-/* 
-.menu-content a {
-    padding: 50px 0;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    font-size:30pt;
-    
-} */
 
 a:visited {color:black;
     text-decoration: none;
@@ -142,7 +127,6 @@ nav:hover .menu-content {
     bottom: 0px;
 }
 
-  
 .social-icon {
     width: 20px;
     height: 20px;
@@ -202,10 +186,6 @@ nav:hover .menu-content {
 
 .picture-container {
     align-self: center;
-}
-
-.container {
-    border: solid;
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {

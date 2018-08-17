@@ -7,10 +7,10 @@ let template = function() {
             <span class="menu-toggle">Menu</span>
             <div class="menu-content">
                 <div class="logo-left">
-                    <a href="./index.html"><img class="logo" src="img/ladder2.png"></a>
+                    <a href="index.html"><img class="logo" src="img/ladder2.png"></a>
                 </div>
                 <div class="aboutus-right">
-                    <a href="./aboutus.html">About Us</a>
+                    <a href="aboutus.html">About Us</a>
                 </div>
             </div>
         </nav>
