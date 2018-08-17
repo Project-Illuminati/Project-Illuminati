@@ -1,7 +1,7 @@
 'use strict';
 import html from '../html.js';
 
-// create the html to display one person's bio
+// creates the html to display each person's bio
 
 let template = function(person) {
     return html`
@@ -17,15 +17,31 @@ let template = function(person) {
 export default class Bio {
     constructor(props) {
         this.person = props.person;
-        this.handleClicksBios = props.handleClicksBios;
+        this.people = props.people;
     }
 
     render() {
         let dom = template(this.person);
         this.div = dom.querySelector('div.bio');
+
+        // the person looking for love was the last person added to the people list
+        let chooser = this.people[this.people.length - 1];
+
+        // put an event listener on all of the bios and create an unselected/selected class
+        // in order to un-highlight/highlight the bio
+        // if the suitor is selected, add them to the chooser's bio picks list
+
         this.div.addEventListener('click', () => {
-            this.handleClicksBios(this.person);
+            if(this.div.classList.contains('selected')){
+                this.div.classList.remove('selected');
+                chooser.bio_picks = chooser.bio_picks.filter(item => item !== this.person);
+            }
+            else {
+                this.div.classList.add('selected');
+                chooser.bio_picks.push(this.person);
+            }
         });
+
         return dom;
     }
 }

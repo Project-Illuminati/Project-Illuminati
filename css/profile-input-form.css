@@ -18,12 +18,10 @@ h3 {
     font-size: 1.1rem;
 }
 
-.h3margin {
-    /* margin-left: 2%; */
 
-}
 .menu-content {
     width: 100%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .grid2 {

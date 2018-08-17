@@ -18,7 +18,10 @@ body {
     font-weight: bold;
 }
 
+.loser {
+    margin-bottom: 70vh;
 
+}
 /****** grid *******/
 
 main {
@@ -33,7 +36,9 @@ main {
     grid-row-gap: 2vh;
 }
 
-
+.menu-content {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 main .nav {
     grid-area: nav;
 }
@@ -82,6 +87,7 @@ bio-image-combo {
     border: 1px solid #E80C7A;
     margin: 5px;
     align-items: center;
+    margin-bottom: 10%;
 }
  .bio-image-combo .image {
     grid-area: image;

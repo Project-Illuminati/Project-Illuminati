@@ -6,6 +6,8 @@ import html from '../html.js';
 import Header from './header.js';
 import Footer from './footer.js';
 
+// create the form that allow a user to enter their profile
+
 let template = function() {
     return html`    
     <main class="grid2">
@@ -25,13 +27,16 @@ export default class App {
         let header = new Header();
         this.main.appendChild(header.render());
 
+        // create user input form
         let profileInputForm = new ProfileInputForm({
             people: this.people,
             onSubmit: (person) => {
-                peopleApi.add(person);
+                peopleApi.add(person); // add new user to local storage
                 console.log('person', person);
             }
         });
+
+        // display form on page
         this.main.appendChild(profileInputForm.render());
 
         // append footer
