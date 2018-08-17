@@ -6,7 +6,7 @@ import html from '../html.js';
 let template = function(person) {
     return html`
     <div class="bio">
-            <p> <span class="celeb-prop"> Celebrity Status: </span> ${person.income} </p>
+            <p> <span class="celeb-prop"> Celebrity Status: </span> ${person.celebStatus} </p>
             <p> <span class="celeb-prop"> Fertility: </span> ${person.fertility} </p>
             <p> <span class="celeb-prop"> Favorite Book: </span> ${person.book} </p>
             <p> <span class="celeb-prop"> Bio: </span> ${person.bio} </p>
