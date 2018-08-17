@@ -70,15 +70,15 @@ let template = function() {
                         <input type="radio" name="book" id="bookradio-5" value="If I Did It by OJ Simpson" />
                         <label class="radiolabel" for="bookradio-5">If I Did It by OJ Simpson</label>
 
-                        <input type="radio" name="book" id="bookradio-6" value="The Boxcar Children"/>
-                        <label class="radiolabel" for="bookradio-6">The Boxcar Children</label>
+                        <input type="radio" name="book" id="bookradio-6" value="The Boxcar Children by Gertrude Chandler Warner"/>
+                        <label class="radiolabel" for="bookradio-6">The Boxcar Children by Gertrude Chandler Warner</label>
 
                         <input type="radio" name="book" id="bookradio-7" value="Leaves of Grass by Walt Whitman"/>
                         <label class="radiolabel" for="bookradio-7">Leaves of Grass by Walt Whitman</label>
                     </div>
 
                     <section class="input-container">
-                            <label> <h3> 5. How would your celebrity best friend describe you? </h3>
+                            <label> <h3> 5. How would you describe yourself to a potential suitor? </h3>
                             <textarea id="textarea" placeholder="Insert bio." name="bio" rows="3" cols="30"></textarea><br>
                             </label>
                     </section>

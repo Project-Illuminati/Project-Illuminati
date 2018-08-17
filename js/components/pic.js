@@ -33,11 +33,9 @@ export default class Pic {
         this.div.addEventListener('click', () => {
             if(this.div.classList.contains('selected')){
                 this.div.classList.remove('selected');
-                this.div.classList.add('unselected');
                 chooser.pic_picks = chooser.pic_picks.filter(item => item !== this.person);
             }
             else {
-                this.div.classList.remove('unselected');
                 this.div.classList.add('selected');
                 chooser.pic_picks.push(this.person);
             }

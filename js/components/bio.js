@@ -34,11 +34,9 @@ export default class Bio {
         this.div.addEventListener('click', () => {
             if(this.div.classList.contains('selected')){
                 this.div.classList.remove('selected');
-                this.div.classList.add('unselected');
                 chooser.bio_picks = chooser.bio_picks.filter(item => item !== this.person);
             }
             else {
-                this.div.classList.remove('unselected');
                 this.div.classList.add('selected');
                 chooser.bio_picks.push(this.person);
             }

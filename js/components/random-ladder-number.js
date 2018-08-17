@@ -26,23 +26,24 @@ export default class RandomLadderNumber {
         // create a message based on the discrepancy between ladder guess and actual
         let intro_message = '';
         if(person.ladder_guess - person.ladder_actual >= 2) {
-            intro_message += 'Way off! Get a clue.';
+            intro_message += 'Way off!  Get a clue.';
         }
         else if(person.ladder_guess - person.ladder_actual === 1) {
             intro_message += 'Just a tad over confident.';
         }
         else if(person.ladder_guess - person.ladder_actual === 0) {
-            intro_message += 'Spot on! How perceptive!';
+            intro_message += 'Spot on!  How perceptive!';
         }
         else if(person.ladder_guess - person.ladder_actual === -1) {
-            intro_message += 'Good news! You\'re a little hotter than you think you are!';
+            intro_message += 'Good news!  You\'re a little hotter than you think you are!';
         }
         else {
-            intro_message += 'Whoa! Get some self esteem.';
+            intro_message += 'Whoa!  Get some self esteem.';
         }
-        intro_message += ' <p> You guessed a ' + person.ladder_guess;
-        intro_message += ' but your actual ladder rating is a ' + person.ladder_actual + '. </p>';
-        intro_message += ' <p> Here are suitor bios in your ladder range.</p>';
+        intro_message += ' You guessed a ' + person.ladder_guess + ' but your actual ladder rating is a ' + person.ladder_actual + '. <br>' ;
+
+        intro_message += ' <p> Here are suitors in your ladder range.  Click to select bios of interest.</p>';
+        intro_message += ' <p>  </p>';
         let dom = template(intro_message);
         return dom;
     }

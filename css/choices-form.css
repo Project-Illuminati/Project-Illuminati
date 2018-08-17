@@ -7,7 +7,8 @@
   
 body {
     background:white;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+    font: 400 .9rem system-ui;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -54,6 +55,7 @@ img {
     margin-right: 5%;
     align-items: center;
     border-bottom: 1px solid #E80C7A;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .logo-left {
@@ -214,14 +216,8 @@ footer {
 .bio.selected {
     background-color: #ce0b6d;
 }
-.bio.unselected {
-    background-color:white;
-}
 .image.selected {
     background-color: #ce0b6d;
-}
-.image.unselected {
-    background-color:white;
 }
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {
