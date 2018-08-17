@@ -31,7 +31,7 @@ export default class App {
         this.main.appendChild(header.render());
 
         let chooser = this.people[this.people.length - 1];
-
+        console.log('biopicks', chooser.bio_picks);
         // finds the love matches
         let matches = [];
         for(let i = 0 ; i < chooser.bio_picks.length; i++){
@@ -49,7 +49,8 @@ export default class App {
             let person = this.people[i];
             if(matches.includes(person.name)){
                 let bioPicCombo = new BioPicCombo({
-                    person: person
+                    person: person,
+                    people: this.people,
                 });
                 this.content.appendChild(bioPicCombo.render());
 

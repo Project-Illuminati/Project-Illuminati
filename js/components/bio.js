@@ -17,15 +17,30 @@ let template = function(person) {
 export default class Bio {
     constructor(props) {
         this.person = props.person;
+        this.people = props.people;
         this.handleClicksBios = props.handleClicksBios;
     }
 
     render() {
         let dom = template(this.person);
         this.div = dom.querySelector('div.bio');
+
+        let chooser = this.people[this.people.length - 1];
+
         this.div.addEventListener('click', () => {
+            if(this.div.classList.contains("selected")){
+                this.div.classList.remove("selected");
+                this.div.classList.add("unselected");
+                chooser.bio_picks = chooser.bio_picks.filter(item => item !== this.person);
+            }
+            else {
+                this.div.classList.remove("unselected");
+                this.div.classList.add("selected");
+                chooser.bio_picks.push(this.person);
+            }
             this.handleClicksBios(this.person);
         });
+
         return dom;
     }
 }

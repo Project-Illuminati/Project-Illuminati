@@ -10,7 +10,6 @@ import ChoicesForm from './choices-form.js';
 let template = function() {
     return html`
     <main class="grid">
-        <div class="intro-message"></div>
     </main>
     `;
 };
@@ -22,7 +21,6 @@ export default class App {
     }
     render() {
         let dom = template();
-
         // append header
         this.main = dom.querySelector('main');
         let header = new Header();
@@ -38,16 +36,22 @@ export default class App {
 
         let choicesForm = new ChoicesForm({
             suitors: suitors,
+            people: this.people,
             handleClicksBios: (person) => {
-                let chooser = this.people[this.people.length - 1];
-                chooser.bio_picks.push(person);
+                // let chooser = this.people[this.people.length - 1];
+                // if(this.div.classList.contains("selected")){
+                //     chooser.bio_picks.push(person);
+                // }
+                // else {
+                //     chooser.bio_picks = chooser.bio_picks.filter(item => item !== person);
+                // }
+                // console.log(chooser.bio_picks);
             },
             handleClicksPics: (person) => {
-                let chooser = this.people[this.people.length - 1];
-                chooser.pic_picks.push(person);
+                // let chooser = this.people[this.people.length - 1];
+                // chooser.pic_picks.push(person);
             },
             handleDone: () => {
-                console.log('inside handle done');
                 choicesForm.update({
                     people: this.people
                 });

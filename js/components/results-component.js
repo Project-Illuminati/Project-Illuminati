@@ -17,6 +17,7 @@ export default class BioPicCombo {
 
     constructor(props) {
         this.person = props.person;
+        this.people = props.people;
     }
 
     render() {
@@ -26,12 +27,14 @@ export default class BioPicCombo {
         let biopiccombo = dom.querySelector('div.bio-pic-combo');
 
         let bio = new Bio({
-            person: this.person
+            person: this.person,
+            people: this.people
         });
         biopiccombo.appendChild(bio.render());
 
         let pic = new Pic({
-            person: this.person
+            person: this.person,
+            people: this.people
         });
         biopiccombo.appendChild(pic.render());
 

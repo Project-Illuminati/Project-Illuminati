@@ -37,9 +37,9 @@ export default class RandomLadderNumber {
         else {
             intro_message += 'Whoa! Get some self esteem.';
         }
-        intro_message += ' You guessed a ' + person.ladder_guess;
-        intro_message += ' but your actual ladder rating is a ' + person.ladder_actual + '.';
-        intro_message += ' Here are suitors in your ladder range.';
+        intro_message += ' <p> You guessed a ' + person.ladder_guess;
+        intro_message += ' but your actual ladder rating is a ' + person.ladder_actual + '. </p>';
+        intro_message += ' <p> Here are suitor bios in your ladder range.</p>';
         let dom = template(intro_message);
         return dom;
     }

@@ -211,7 +211,18 @@ footer {
     margin-bottom: 1%;
     box-shadow: none;
 }
-
+.bio.selected {
+    background-color: #ce0b6d;
+}
+.bio.unselected {
+    background-color:white;
+}
+.image.selected {
+    background-color: #ce0b6d;
+}
+.image.unselected {
+    background-color:white;
+}
 @supports ((display: -ms-grid) or (display: grid)) {
     @media (max-width: 500px) {
         /* nav bar */
