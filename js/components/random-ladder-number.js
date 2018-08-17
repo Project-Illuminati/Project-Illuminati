@@ -2,13 +2,16 @@
 
 import html from '../html.js';
 
+// give the user a random ladder number and generate a message
+// based on the discrepancy between their guess and the assigned number
+// on the choices page
+
 let template = function(intro_message) {
     return html`
     <div class = 'intro-message'>${intro_message}</div>
     `;
 };
 
-// prints results data to screen
 export default class RandomLadderNumber {
     constructor(props) {
         this.people = props.people;

@@ -4,15 +4,17 @@ import html from '../html.js';
 import Bio from './bio.js';
 import Pic from './pic.js';
 
+// creates a component that puts the bio and pic of each love match together
+// for display on results page
+
 let template = function(person) {
     return html`
     <div class="bio-pic-combo">
-    <div class="celeb-name"> <h3> ${person.name} </h3> </div>
+        <div class="celeb-name"> <h3> ${person.name} </h3> </div>
     </div>
     `;
 };
 
-// prints results data to screen
 export default class BioPicCombo {
 
     constructor(props) {
@@ -22,7 +24,6 @@ export default class BioPicCombo {
 
     render() {
         let dom = template(this.person);
-
 
         let biopiccombo = dom.querySelector('div.bio-pic-combo');
 

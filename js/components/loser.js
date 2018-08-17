@@ -1,12 +1,12 @@
 'use strict';
 import html from '../html.js';
 
-// create the html to display one person's bio
+// create the html to display results for someone who has no matches
 
 let template = function() {
     return html`
     <div class="loser">
-    See a therapist you have no compatibility.
+        See a therapist you have no compatibility.
     </div>`;
 };
 

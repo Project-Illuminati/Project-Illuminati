@@ -4,6 +4,7 @@ import html from '../html.js';
 import Bio from './bio.js';
 import Pic from './pic.js';
 
+// creates the html that displays the "form" that allows user to choose bios and pictures
 let template = function() {
     return html`
     <div class="form-contents">    
@@ -18,8 +19,6 @@ let template = function() {
 
 export default class ChoicesForm {
     constructor(props) {
-        this.handleClicksBios = props.handleClicksBios;
-        this.handleClicksPics = props.handleClicksPics;
         this.handleDone = props.handleDone;
         this.suitors = props.suitors;
         this.people = props.people;
@@ -28,6 +27,7 @@ export default class ChoicesForm {
     render() {
         let dom = template();
 
+        // first display the user bios
         this.form = dom.querySelector('div.choice-form');
         this.containingFormDiv = dom.querySelector('.outer-choice-form');
 
@@ -35,11 +35,11 @@ export default class ChoicesForm {
             let bio = new Bio({
                 person: this.suitors[i],
                 people: this.people,
-                handleClicksBios: this.handleClicksBios
             });
             this.form.appendChild(bio.render());
         }
 
+        // when the user has finished selecting bios, update the page to display pics instead
         let firstButton = dom.querySelector('button.done');
         firstButton.addEventListener('click', () => {
             this.handleDone();
@@ -48,19 +48,21 @@ export default class ChoicesForm {
             message.innerHTML = 'Now choose pictures of celebs in your ladder range.';
         });
 
+        // when the user has finished selecting pics, redirect them to results page
         let secondButton = dom.querySelector('button.redirect');
         secondButton.hidden = true;
         secondButton.addEventListener('click', () => {
-            this.handleDone();
         });
 
         return dom;
 
     }
 
+    // remove all bios and display pictures instead
     update(props) {
         this.people = props.people;
         this.containingFormDiv.lastElementChild.remove();
+
         while(this.form.lastElementChild){
             this.form.lastElementChild.remove();
         }
@@ -69,7 +71,6 @@ export default class ChoicesForm {
             let pic = new Pic({
                 person: this.suitors[i],
                 people: this.people,
-                handleClicksPics: this.handleClicksPics
             });
             this.form.appendChild(pic.render());
         }
