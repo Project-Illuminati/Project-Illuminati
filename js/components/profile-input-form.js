@@ -26,20 +26,23 @@ let template = function() {
                     <label> <h3 class="h3margin">2. What is your celebrity status? </h3> </label>
                     <div class="radio-flex-income">
 
-                        <input type="radio" name="incomestatus" id="statusradio-1" value="Retired child star" checked/>
+                        <input type="radio" name="celebstatus" id="statusradio-1" value="Retired child star" checked/>
                         <label class="radiolabel" for="statusradio-1">Retired child star</label>
 
-                        <input type="radio" name="incomestatus" id="statusradio-2" value="Infamous but really just misunderstood" />
+                        <input type="radio" name="celebstatus" id="statusradio-2" value="Infamous but really just misunderstood" />
                         <label class="radiolabel" for="statusradio-2">Infamous but really just misunderstood</label>
 
-                        <input type="radio" name="incomestatus" id="statusradio-3" value="Super popular on the Hallmark Channel"/>
-                        <label class="radiolabel" for="statusradio-3">All press is good press</label>
+                        <input type="radio" name="celebstatus" id="statusradio-3" value="Famous for being racist" />
+                        <label class="radiolabel" for="statusradio-3">Famous for being racist</label>
 
-                        <input type="radio" name="incomestatus" id="statusradio-4" value="Multihyphenate Actor/Director/Producer/Musician"/>
-                        <label class="radiolabel" for="statusradio-4">Multihyphenate Actor/Director/Producer/Musician</label>
+                        <input type="radio" name="celebstatus" id="statusradio-4" value="All press is good press"/>
+                        <label class="radiolabel" for="statusradio-4">All press is good press</label>
 
-                        <input type="radio" name="incomestatus" id="statusradio-5" value="Friends with Bono"/>
-                        <label class="radiolabel" for="statusradio-5">Friends with Bono</label>
+                        <input type="radio" name="celebstatus" id="statusradio-5" value="Multihyphenate Actor/Director/Producer/Musician"/>
+                        <label class="radiolabel" for="statusradio-5">Multihyphenate Actor/Director/Producer/Musician</label>
+
+                        <input type="radio" name="celebstatus" id="statusradio-6" value="Friends with Bono"/>
+                        <label class="radiolabel" for="statusradio-6">Friends with Bono</label>
                     </div>
 
                     <section class="input-container">
@@ -125,15 +128,17 @@ export default class ProfileInputForm {
             // #2 Gather up data
             let elements = this.form.elements;
             let name = elements.name.value;
-            let income = elements.incomestatus.value;
+            let celebStatus = elements.celebstatus.value;
             let fertility = elements.fertility.value;
             let book = elements.book.value;
             let bio = elements.bio.value;
             let pic = elements.pic.value;
             let ladder = parseInt(elements.ladder_guess.value);
 
+            console.log('income', celebStatus);
+
             let person = { name: name,
-                income: income,
+                celebStatus: celebStatus,
                 fertility: fertility,
                 book: book,
                 bio: bio,

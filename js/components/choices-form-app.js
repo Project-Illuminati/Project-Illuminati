@@ -3,7 +3,7 @@
 import html from '../html.js';
 import Header from './header.js';
 import Footer from './footer.js';
-import RandomLadderNumber from './random-ladder-number.js';
+import NonRandomLadderNumber from './non-random-ladder-number.js';
 import peopleApi from '../services/people-api.js';
 import ChoicesForm from './choices-form.js';
 
@@ -29,8 +29,8 @@ export default class App {
         this.main.appendChild(header.render());
 
         // assign a ladder rating and post a message accordingly
-        let randomNumberLadder = new RandomLadderNumber({ people: this.people });
-        this.main.appendChild(randomNumberLadder.render());
+        let nonrandomNumberLadder = new NonRandomLadderNumber({ people: this.people });
+        this.main.appendChild(nonrandomNumberLadder.render());
 
         // find suitors in this range
         let suitors = findSuitors(this.people);
