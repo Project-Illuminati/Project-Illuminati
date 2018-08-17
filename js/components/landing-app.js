@@ -7,7 +7,7 @@ let template = function() {
         <main class="grid">
             <div class="content">
                 <div class="welcome-text">
-                    <p>Meet like-minded, fertile celebrities nearby that are <span> just as beautiful as you.<span></p>
+                    <p>Meet like-minded, fertile celebrities that are <span> just as beautiful as you.<span></p>
                 </div>
                 <div class="button-container">
                     <button onclick="window.location.href='profile-input-form.html'">Get Started</button>
