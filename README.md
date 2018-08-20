@@ -12,3 +12,5 @@ We’ll address users getting a date by letting them choose bios and matching th
 ![Wire frames & Component Diagrams:](img/wireframes&componentdiagram.jpg)
 
 ![Group agreements:](img/groupagreements.jpg)
+
+// initial commit
