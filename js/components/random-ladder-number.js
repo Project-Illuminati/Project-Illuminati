@@ -1,5 +1,3 @@
-'use strict';
-
 import html from '../html.js';
 
 // give the user a random ladder number and generate a message

@@ -1,5 +1,3 @@
-'use strict';
-
 import html from '../html.js';
 import peopleApi from '../services/people-api.js';
 import Header from './header.js';
@@ -10,10 +8,10 @@ import Loser from './loser.js';
 // display the user's final love matches
 let template = function() {
     return html`
-    <main>
-        <div class="results-content">
-        </div>
-    </main>
+        <main>
+            <div class="results-content">
+            </div>
+        </main>
     `;
 };
 
@@ -37,15 +35,18 @@ export default class App {
 
         // finds their love matches (those who they chose both the pic and bio of)
         let matches = [];
-        for(let i = 0 ; i < chooser.bio_picks.length; i++){
-            let suitorName = chooser.bio_picks[i].name;
-            for(let j = 0; j < chooser.pic_picks.length; j++){
-                if(suitorName === chooser.pic_picks[j].name && !matches.includes(suitorName)){
+        // any time repetitive obj.prop.prop use variables!
+        let bioPicks = chooser.bio_picks;
+        let picPicks = chooser.pic_picks;
+
+        for(let i = 0 ; i < bioPicks.length; i++){
+            let suitorName = bioPicks[i].name;
+            for(let j = 0; j < picPicks.length; j++){
+                if(suitorName === picPicks[j].name && !matches.includes(suitorName)){
                     matches.push(suitorName);
                 }
             }
         }
-        console.log(matches);
 
         // put the bio and pic of each love match on the screen
         this.content = dom.querySelector('div.results-content');
@@ -60,11 +61,11 @@ export default class App {
 
             }
         }
+
         // if there were no matches tell the person to go to therapy
         if(!matches.length){
             let loser = new Loser();
             this.content.appendChild(loser.render());
-
         }
 
         // append footer

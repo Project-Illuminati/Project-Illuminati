@@ -1,5 +1,3 @@
-'use strict';
-
 import peopleApi from '../services/people-api.js';
 import ProfileInputForm from './profile-input-form.js';
 import html from '../html.js';
@@ -9,9 +7,10 @@ import Footer from './footer.js';
 // create the form that allow a user to enter their profile
 
 let template = function() {
+    // grid2? how about profile-grid?
     return html`    
-    <main class="grid2">
-    </main>`;
+        <main class="grid2"></main>
+    `;
 
 };
 
@@ -32,6 +31,10 @@ export default class App {
             people: this.people,
             onSubmit: (person) => {
                 peopleApi.add(person); // add new user to local storage
+                
+                // add navigation here as a result of the action!
+                window.location.href = 'choices-form.html';
+
                 console.log('person', person);
             }
         });

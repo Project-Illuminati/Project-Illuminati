@@ -1,4 +1,3 @@
-'use strict';
 import html from '../html.js';
 
 // create the html to display each person's image
