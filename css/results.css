@@ -92,6 +92,7 @@ bio-image-combo {
  .bio-image-combo .image {
     grid-area: image;
 } 
+
 .celeb-name {
     align-self: center;
 }
@@ -103,7 +104,8 @@ bio-image-combo {
     padding-right: 5%;
     word-wrap: break-word;
 }
- .bio-pic-combo .image {
+
+.bio-pic-combo .image {
     align-self: center;
 } 
 

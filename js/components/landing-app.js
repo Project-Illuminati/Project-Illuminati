@@ -10,7 +10,7 @@ let template = function() {
                     <p>Meet like-minded, fertile celebrities that are <span> just as beautiful as you.<span></p>
                 </div>
                 <div class="button-container">
-                    <button onclick="window.location.href='profile-input-form.html'">Get Started</button>
+                    <button>Get Started</button>
                 </div>
 
             </div>
@@ -30,6 +30,10 @@ export default class App {
     render() {
         let dom = template();
         let main = dom.querySelector('main');
+
+        dom.querySelector('button').addEventListener('click', () => {
+            window.location.href = 'profile-input-form.html';
+        });
 
         let header = new Header();
         let footer = new Footer();

@@ -1,4 +1,3 @@
-
 import App from './components/results-app.js';
 
 let root = document.getElementById('root');

@@ -1,5 +1,3 @@
-'use strict';
-
 import html from '../html.js';
 
 // creates the html for the user input form
@@ -102,7 +100,9 @@ let template = function() {
 
                 </div>
                 <div class="input-button-container">
-                    <input id="input-form-button" type="submit" onclick="window.location.href='choices-form.html'">
+                    <!-- very confusing to "hide" the redirect here, and timing is not guaranteed. Move to App.js -->
+                    <!-- <input id="input-form-button" type="submit" onclick="window.location.href='choices-form.html'"> -->
+                    <input id="input-form-button" type="submit">
                 </div>
             </div>
         </form>
@@ -137,7 +137,8 @@ export default class ProfileInputForm {
 
             console.log('income', celebStatus);
 
-            let person = { name: name,
+            let person = {
+                name: name,
                 celebStatus: celebStatus,
                 fertility: fertility,
                 book: book,
@@ -145,7 +146,8 @@ export default class ProfileInputForm {
                 pic: pic,
                 ladder_guess: ladder,
                 bio_picks: [],
-                pic_picks: [] };
+                pic_picks: []
+            };
 
             try {
                 // #4 Process success or failure

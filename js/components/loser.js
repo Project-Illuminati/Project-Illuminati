@@ -1,4 +1,3 @@
-'use strict';
 import html from '../html.js';
 
 // create the html to display results for someone who has no matches
@@ -14,7 +13,6 @@ export default class Loser {
 
     render() {
         let dom = template();
-        this.div = dom.querySelector('div.loser');
         return dom;
     }
 }
